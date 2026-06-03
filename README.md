@@ -30,6 +30,15 @@ Naming convention:
 - Repos/projects: `notes/repos/repo-owner-name.md`
 - Products/APIs: `notes/products/product-name.md`
 
+## Curated Maps
+
+The two highest-signal entry points are:
+
+- [docs/academic-papers.md](docs/academic-papers.md): top-venue and high-impact academic paper map.
+- [docs/industry-reports.md](docs/industry-reports.md): industry technical reports, products, open-source systems, sandboxes, and guardrails.
+
+Use [docs/taxonomy.md](docs/taxonomy.md) to classify new entries and [docs/source-map.md](docs/source-map.md) to find upstream discovery sources.
+
 ## Existing Public Lists To Monitor
 
 These are our upstream discovery sources. We should use them for breadth and updates, but keep our own notes independent.
@@ -46,17 +55,22 @@ More detail is in [docs/source-map.md](docs/source-map.md).
 
 ### Surveys And Framing
 
-- [ ] Survey of GUI agents and foundation-model-based GUI automation.
-- [ ] Trustworthy GUI agents: reliability, safety, attacks, and defenses.
-- [ ] Computer-use agents: relation between GUI control, browser agents, and OS-level automation.
+- [ ] [GUI Agents with Foundation Models: A Comprehensive Survey](https://arxiv.org/abs/2411.04890).
+- [ ] [GUI Agents: A Survey](https://arxiv.org/abs/2412.13501).
+- [ ] [OS Agents: A Survey on MLLM-based Agents for Computer, Phone and Browser Use](https://aclanthology.org/2025.acl-long.369/).
+- [ ] [Towards Trustworthy GUI Agents: A Survey](https://arxiv.org/abs/2503.23434).
 
 ### Benchmarks
 
 - [ ] [OSWorld](https://github.com/xlang-ai/OSWorld): open-ended desktop tasks in real computer environments.
 - [ ] [WebArena](https://github.com/web-arena-x/webarena): realistic web environment for autonomous agents.
+- [ ] [VisualWebArena](https://aclanthology.org/2024.acl-long.50/): visually grounded web-agent tasks.
 - [ ] [AndroidWorld](https://github.com/google-research/android_world): Android environment and benchmark for autonomous agents.
+- [ ] [WorkArena](https://proceedings.mlr.press/v235/drouin24a.html): enterprise knowledge-work benchmark.
+- [ ] [Windows Agent Arena](https://github.com/microsoft/WindowsAgentArena): Windows OS-agent benchmark.
 - [ ] [ScreenSpot-Pro](https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding): professional high-resolution GUI grounding.
 - [ ] [OSWorld-G](https://github.com/xlang-ai/OSWorld-G): grounding-focused OSWorld extension.
+- [ ] [VideoGUI](https://proceedings.neurips.cc/paper_files/paper/2024/hash/804e757b7d7043c26701c3a313032101-Abstract-Datasets_and_Benchmarks_Track.html): GUI automation from instructional videos.
 - [ ] [RiOSWorld](https://github.com/yjyddq/RiOSWorld): risk benchmark for multimodal computer-use agents.
 - [ ] [OS-Harm](https://github.com/tml-epfl/os-harm): safety benchmark for computer-use agents.
 
@@ -64,12 +78,27 @@ More detail is in [docs/source-map.md](docs/source-map.md).
 
 - [ ] [OpenCUA](https://github.com/xlang-ai/OpenCUA): open foundations for computer-use agents.
 - [ ] [UI-TARS](https://github.com/bytedance/UI-TARS): native GUI agent work from ByteDance.
+- [ ] [UI-TARS-2 Technical Report](https://arxiv.org/abs/2509.02544): multi-turn RL and data flywheel.
 - [ ] [UI-TARS Desktop](https://github.com/bytedance/UI-TARS-desktop): open multimodal agent stack for desktop use.
 - [ ] [SeeClick](https://github.com/njucckevin/SeeClick): visual GUI agent model/data/code.
+- [ ] [OS-ATLAS](https://github.com/OS-Copilot/OS-Atlas): foundation action model for generalist GUI agents.
+- [ ] [ShowUI](https://github.com/showlab/ShowUI): vision-language-action model for GUI visual agents.
+- [ ] [Aguvis](https://github.com/xlang-ai/aguvis): unified pure-vision GUI agent.
+- [ ] [Agent S](https://proceedings.iclr.cc/paper_files/paper/2025/hash/394c7c30ea87b5c3521b4d9e9d419071-Abstract-Conference.html): open agentic framework for computer use.
 - [ ] [ScaleCUA](https://github.com/OpenGVLab/ScaleCUA): cross-platform computer-use agent.
+- [ ] [Mobile-Agent-v3](https://arxiv.org/abs/2508.15144): fundamental agents for GUI automation.
+- [ ] [UI-Venus Technical Report](https://arxiv.org/abs/2508.10833): high-performance UI agents with RFT.
 - [ ] [ShowUI-Aloha](https://github.com/showlab/ShowUI-Aloha): human-taught computer-use agent for Windows and macOS.
 - [ ] [EvoCUA](https://github.com/meituan/EvoCUA): evolving computer-use agent.
 - [ ] [SEAgent](https://github.com/SunzeY/SEAgent): self-evolving computer-use agent.
+
+### Learning And Reward Models
+
+- [ ] [WebRL](https://openreview.net/forum?id=oVKEAFjEqv): self-evolving online curriculum RL for web agents.
+- [ ] [WebAgent-R1](https://arxiv.org/abs/2505.16421): end-to-end multi-turn RL for web agents.
+- [ ] [DigiRL](https://proceedings.neurips.cc/paper_files/paper/2024/hash/1704ddd0bb89f159dfe609b32c889995-Abstract-Conference.html): in-the-wild mobile device-control RL.
+- [ ] [Web-Shepherd](https://arxiv.org/abs/2505.15277): process reward model for web agents.
+- [ ] [GUI-G1](https://arxiv.org/abs/2505.15810): R1-Zero-like RL for GUI grounding.
 
 ### Infrastructure And Tools
 
@@ -85,7 +114,10 @@ More detail is in [docs/source-map.md](docs/source-map.md).
 - [ ] [RedTeamCUA](https://github.com/OSU-NLP-Group/RedTeamCUA): adversarial testing in hybrid web-OS environments.
 - [ ] [RiOSWorld](https://github.com/yjyddq/RiOSWorld): risk benchmark.
 - [ ] [OS-Harm](https://github.com/tml-epfl/os-harm): harm-oriented computer-use safety benchmark.
-- [ ] Prompt-injection and malicious UI attacks against browser/computer-use agents.
+- [ ] [AgentDAM](https://arxiv.org/abs/2503.09780): privacy leakage evaluation for autonomous web agents.
+- [ ] [Attacking Vision-Language Computer Agents via Pop-ups](https://aclanthology.org/2025.acl-long.411/): adversarial UI attacks.
+- [ ] [ST-WebAgentBench](https://openreview.net/forum?id=MuCDzH0ctf): safety and trustworthiness in web agents.
+- [ ] Prompt-injection, malicious UI, and environmental injection attacks against browser/computer-use agents.
 
 ## Notes Index
 
@@ -98,6 +130,8 @@ More detail is in [docs/source-map.md](docs/source-map.md).
 
 ### Repos And Systems
 
+- [Academic paper map](docs/academic-papers.md)
+- [Industry technical reports](docs/industry-reports.md)
 - [Public source map](docs/source-map.md)
 - [Working taxonomy](docs/taxonomy.md)
 

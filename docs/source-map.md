@@ -27,6 +27,8 @@ Local snapshots of selected public READMEs can be kept under `sources/` while re
 | [tml-epfl/os-harm](https://github.com/tml-epfl/os-harm) | Safety | Harm-oriented benchmark design. |
 | [ServiceNow/webarena-verified](https://github.com/ServiceNow/webarena-verified) | Web | Verification and benchmark reliability. |
 
+See [academic-papers.md](academic-papers.md) for the curated paper-level map and [industry-reports.md](industry-reports.md) for technical reports and systems.
+
 ## Models, Agents, And Training
 
 | Repo | Focus | What To Read For |
