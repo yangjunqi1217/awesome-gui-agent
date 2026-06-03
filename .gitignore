@@ -1,0 +1,3 @@
+sources/*.md
+!sources/README.md
+.DS_Store
