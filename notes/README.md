@@ -12,6 +12,7 @@ Internal guides:
 - [Research questions](../docs/research-questions.md)
 - [Source map](../docs/source-map.md)
 - [Working taxonomy](../docs/taxonomy.md)
+- [Video/VLM transition route](../docs/video-vlm-to-gui-agent.md)
 
 When we actually read an item:
 

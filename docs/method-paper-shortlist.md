@@ -71,7 +71,10 @@ Status labels:
 | read-now | [ANCHOR](https://arxiv.org/abs/2602.07153) | arXiv 2026 | Branch-point trajectory expansion | Useful for data generation beyond one successful path. |
 | read-now | [CUA-Suite](https://arxiv.org/abs/2603.24440) | arXiv 2026 | Data capture, generation, and evaluation suite | Industry-style data infrastructure reference. |
 | read-next | [OpenCUA AgentNet](https://arxiv.org/abs/2508.09123) | arXiv 2025 | Cross-platform trajectory capture and reflective CoT | Reproduction anchor for large-scale CUA data. |
-| watch | [VideoGUI](https://proceedings.neurips.cc/paper_files/paper/2024/hash/804e757b7d7043c26701c3a313032101-Abstract-Datasets_and_Benchmarks_Track.html) | NeurIPS 2024 Datasets and Benchmarks | Video-derived GUI supervision | Use when considering instructional-video supervision. |
+| read-next | [VideoGUI](https://proceedings.neurips.cc/paper_files/paper/2024/hash/804e757b7d7043c26701c3a313032101-Abstract-Datasets_and_Benchmarks_Track.html) | NeurIPS 2024 Datasets and Benchmarks | Video-derived GUI supervision | Use when considering instructional-video supervision. |
+| read-next | [ShowUI-Aloha](https://arxiv.org/abs/2601.07181) | arXiv 2026 / Show Lab | Screen-recording-to-teaching pipeline | Strong match for learning GUI agents from human demonstration videos. |
+| read-next | [VideoAgentTrek](https://arxiv.org/abs/2510.19488) | arXiv 2025 | Video mining and inverse dynamics | Direct fit for pretraining from unlabeled tutorial videos. |
+| read-next | [Watch and Learn](https://arxiv.org/abs/2510.04673) | CVPR 2026 | Online-video-to-executable-trajectory conversion | Turns public computer-use videos into action supervision. |
 
 ## RL, Reward Models, And Self-Improvement
 
@@ -81,6 +84,7 @@ Status labels:
 | read-now | [WebRL](https://openreview.net/forum?id=oVKEAFjEqv) | ICLR 2025 | Self-evolving online curriculum RL | Core RL recipe for web agents. |
 | read-now | [Web-Shepherd](https://arxiv.org/abs/2505.15277) | NeurIPS 2025 Spotlight | Process reward model for web trajectories | Direct input for progress/reward research. |
 | read-now | [ProgRM](https://arxiv.org/abs/2505.18121) | arXiv 2025 | Dense GUI progress rewards | Closest prior for state-delta progress reward ideas. |
+| read-now | [Video-Based Reward Modeling for Computer-Use Agents](https://arxiv.org/abs/2603.10178) | arXiv 2026 | Execution-video reward model | Best match for video/VLM-based progress verification. |
 | read-next | [ComputerRL](https://arxiv.org/abs/2508.14040) | ICLR 2026 listed upstream, verify | Online RL over parallel virtual desktops and API-GUI actions | Strong industry-style desktop RL system. |
 | read-next | [MobileRL](https://arxiv.org/abs/2509.18119) | ICLR 2026 listed upstream, verify | Difficulty-adaptive GRPO for mobile agents | Useful for mobile RL and failure curriculum. |
 | watch | [Android Coach](https://arxiv.org/abs/2604.07277) | arXiv 2026 | Critic/process reward for multiple actions per state | Candidate method for efficient online RL. |

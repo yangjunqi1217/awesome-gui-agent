@@ -66,6 +66,53 @@ Likely paper families:
 
 - RL, reward models, and self-improvement.
 - Training data and trajectory generation.
+- Video demonstrations and execution-video reward models.
+
+## Research Direction 2a: Video-To-Action Supervision
+
+Claim shape:
+
+Large amounts of useful GUI-agent supervision can be recovered from screen recordings and tutorial videos, but the bottleneck is action recovery and data quality, not benchmark construction.
+
+Research questions:
+
+- Can we infer click, drag, scroll, typing, and shortcut actions from before/after screen states?
+- Can action boundaries be detected reliably when cursor motion, narration, and UI transitions are noisy?
+- Can a data-quality model decide which video segments are useful for agent training?
+- Can we align narration, screen changes, hidden keyboard actions, and final task progress?
+
+Why this is not a benchmark paper:
+
+The contribution is an inverse-dynamics and data-selection mechanism for transforming videos into trajectories. Existing GUI tasks only provide validation environments.
+
+Likely paper families:
+
+- Video demonstrations and trajectory generation.
+- GUI representation and grounding.
+- Training data valuation.
+
+## Research Direction 2b: Execution-Video Verification
+
+Claim shape:
+
+A GUI agent's run should be judged from the execution video and instruction, because final state labels miss when and why the trajectory became wrong.
+
+Research questions:
+
+- Can a VLM localize the first useless, harmful, or off-track step in an execution video?
+- Can execution-video reward models provide dense progress signals for RL or reranking?
+- Can temporal attribution separate grounding mistakes from planning and recovery mistakes?
+- Can a verifier handle visually subtle state changes such as a wrong account, hidden modal, or stale page?
+
+Why this is not a benchmark paper:
+
+The contribution is a reward/verifier model and attribution protocol. Benchmarks supply trajectories and success checks as evidence.
+
+Likely paper families:
+
+- Reward models and self-improvement.
+- State-aware recovery.
+- Safety and trust boundaries.
 
 ## Research Direction 3: GUI Representation Selection
 
@@ -198,6 +245,7 @@ Likely paper families:
 - GUI representation and screen understanding.
 - Action models and GUI-VLA agents.
 - Systems efficiency.
+- Long-horizon visual memory and temporal compression.
 
 ## Research Direction 9: Human Confirmation Policy
 

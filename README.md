@@ -1,14 +1,22 @@
 # Awesome GUI Agent [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of GUI agents, computer-use agents, UI grounding, action models, training methods, safety work, and infrastructure.
+A private living survey of GUI agents, computer-use agents, UI grounding, action models, training methods, safety work, and infrastructure.
 
-This repository is organized around GUI-agent mechanisms rather than benchmark names. Benchmarks are included as experimental substrates for reading papers and comparing systems.
+This repository is organized around GUI-agent mechanisms rather than benchmark names. Benchmarks are included as experimental substrates for reading papers and comparing systems, not as the default source of research questions.
+
+<h2><a href="docs/gui-paper-landscape.md">A Mechanism-First Reading Map For GUI Agents</a></h2>
+
+This is our working handbook for reading GUI-agent papers and maintaining notes. The main split is not "which benchmark is new"; it is which mechanism a paper proposes: screen representation, visual grounding, action modeling, planning, recovery, memory, training signal, reward modeling, safety policy, or execution infrastructure.
+
+For a video understanding / VLM background, start with the video-demonstration branch in [`docs/video-vlm-to-gui-agent.md`](docs/video-vlm-to-gui-agent.md). It focuses on screen recordings, instructional videos, execution-video reward models, GUI world models, and long-trajectory compression.
 
 <p align="center">
   <img src="assets/gui-agent-taxonomy.svg" alt="GUI agent taxonomy" width="860" />
 </p>
 
 <h3>News</h3>
+
+**2026-06-04** - Added a video/VLM-to-GUI transition route covering video demonstrations, execution-video rewards, GUI world models, recovery, and temporal compression.
 
 **2026-06-04** - Reframed the list around GUI-agent paper families: representation, grounding, action models, planning, recovery, memory, RL, safety, and infrastructure.
 
@@ -20,11 +28,14 @@ Most GUI-agent papers contribute a mechanism: a screen representation, grounding
 
 The root README keeps a compact curated list. Broader intake, reading notes, and research questions live in [`docs/`](docs/) and [`notes/`](notes/).
 
+**Quick Navigation**: Surveys | Grounding | Action Models | Video/VLM Route | Planning | Training | Safety | Infrastructure
+
 ## Contents
 
 - [Surveys](#surveys)
 - [GUI Representation and Grounding](#gui-representation-and-grounding)
 - [Action Models and Agents](#action-models-and-agents)
+- [Video, Demonstrations, and Trajectories](#video-demonstrations-and-trajectories)
 - [Planning, Recovery, and Memory](#planning-recovery-and-memory)
 - [Training, RL, and Reward Models](#training-rl-and-reward-models)
 - [Safety and Trust](#safety-and-trust)
@@ -62,6 +73,21 @@ The root README keeps a compact curated list. Broader intake, reading notes, and
 - [Mobile-Agent-v3](https://arxiv.org/abs/2508.15144) - GUI-Owl foundation model and multi-agent framework for GUI automation.
 - [UI-Venus](https://arxiv.org/abs/2508.10833) - Screenshot-only UI agent trained with reinforcement fine-tuning and data cleaning.
 - [AutoGLM](https://arxiv.org/abs/2411.00820) - Foundation GUI agent for phone and browser control with self-evolving RL.
+
+## Video, Demonstrations, and Trajectories
+
+These papers are the most natural bridge from video understanding and VLM work into GUI agents. Benchmarks here are useful because their data and experiments expose temporal understanding, inverse dynamics, demonstration learning, and execution-video evaluation problems.
+
+- [VideoGUI](https://proceedings.neurips.cc/paper_files/paper/2024/hash/804e757b7d7043c26701c3a313032101-Abstract-Datasets_and_Benchmarks_Track.html) - GUI automation tasks derived from instructional videos for visually specified desktop workflows.
+- [VideoWebArena](https://proceedings.iclr.cc/paper_files/paper/2025/hash/5b555804d495321df2e3208cc27f4fbc-Abstract-Conference.html) - Long-context web-agent tasks grounded in tutorial videos.
+- [CUA-Suite](https://arxiv.org/abs/2603.24440) - Human-annotated desktop video demonstrations, grounding annotations, and evaluation data for computer-use agents.
+- [ShowUI-Aloha](https://arxiv.org/abs/2601.07181) - Human-taught desktop GUI agent pipeline built from screen recordings.
+- [VideoAgentTrek](https://arxiv.org/abs/2510.19488) - Computer-use pretraining from unlabeled tutorial videos through video mining and inverse dynamics.
+- [Watch and Learn](https://arxiv.org/abs/2510.04673) - Converts online videos of human computer use into executable UI trajectories.
+- [Video-Based Reward Modeling for Computer-Use Agents](https://arxiv.org/abs/2603.10178) - Execution-video reward modeling for trajectory evaluation across desktop and mobile environments.
+- [GUI-KV](https://arxiv.org/abs/2510.00536) - Spatio-temporal KV-cache compression for multi-screenshot GUI-agent contexts.
+- [MobileDreamer](https://arxiv.org/abs/2601.04035) - GUI world model that predicts task-relevant future interface sketches for mobile planning.
+- [Code2World](https://arxiv.org/abs/2602.09856) - Renderable-code GUI world model for next-state prediction and downstream navigation.
 
 ## Planning, Recovery, and Memory
 
@@ -122,7 +148,6 @@ Benchmarks are listed here as experimental substrates. They are useful for readi
 - [WorkArena](https://proceedings.mlr.press/v235/drouin24a.html) - Enterprise knowledge-work benchmark built around ServiceNow tasks.
 - [Windows Agent Arena](https://github.com/microsoft/WindowsAgentArena) - Windows-specific OS-agent evaluation environment.
 - [OSWorld-G](https://github.com/xlang-ai/OSWorld-G) - Grounding-focused extension of OSWorld.
-- [VideoGUI](https://proceedings.neurips.cc/paper_files/paper/2024/hash/804e757b7d7043c26701c3a313032101-Abstract-Datasets_and_Benchmarks_Track.html) - GUI automation benchmark from instructional videos.
 - [ScienceBoard](https://arxiv.org/abs/2505.19897) - Scientific-workflow benchmark with professional desktop software.
 
 ## Related Lists

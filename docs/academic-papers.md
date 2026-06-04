@@ -68,6 +68,8 @@ Read these after the relevant method papers, mainly to understand experimental s
 | priority | [OS-HARM: A Benchmark for Measuring Safety of Computer Use Agents](https://arxiv.org/abs/2503.18492) | NeurIPS 2025 Datasets and Benchmarks Spotlight | Desktop / safety | Safety benchmark for computer-use agents built on OSWorld. |
 | verify | [ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic Scientific Workflows](https://arxiv.org/abs/2505.19897) | ICLR 2026 (verify) | Desktop / scientific software | Professional scientific-workflow benchmark with integrated software. |
 | verify | [RedTeamCUA: Realistic Adversarial Testing of Computer-Use Agents in Hybrid Web-OS Environments](https://openreview.net/forum?id=yWwrgcBoK3) | ICLR 2026 Oral (verify) | Desktop / web / safety | Hybrid OS-web indirect prompt-injection benchmark. |
+| watch | [CUA-Suite: Massive Human-annotated Video Demonstrations for Computer-Use Agents](https://arxiv.org/abs/2603.24440) | arXiv 2026 | Desktop / video | Large-scale expert screen-video demonstrations and grounding data for computer-use agents. |
+| watch | [Watch and Learn: Learning to Use Computers from Online Videos](https://arxiv.org/abs/2510.04673) | CVPR 2026 | Desktop / video | Converts online computer-use videos into executable UI trajectories through inverse dynamics. |
 | watch | [VisualWebBench: How Far Have Multimodal LLMs Evolved in Web Page Understanding and Grounding?](https://openreview.net/forum?id=egVSgtJJAx) | COLM 2024 | Web | Web-page understanding and grounding. |
 | watch | [OfficeBench: Benchmarking Language Agents across Multiple Applications for Office Automation](https://arxiv.org/abs/2407.19056) | arXiv 2024 | Office automation | Multi-app office workflow benchmark. |
 | watch | [WebCanvas: Benchmarking Web Agents in Online Environments](https://arxiv.org/abs/2406.12373) | arXiv 2024 | Web | Online/live-web progress-aware evaluation. |
@@ -102,6 +104,9 @@ Read these after the relevant method papers, mainly to understand experimental s
 | priority | [SE-GUI: Enhancing Visual Grounding for GUI Agents via Self-Evolutionary Reinforcement Learning](https://arxiv.org/abs/2505.12370) | NeurIPS 2025 | Grounding | Self-evolutionary RL for high-resolution GUI grounding. |
 | priority | [WebAgent-R1: Training Web Agents via End-to-End Multi-Turn Reinforcement Learning](https://arxiv.org/abs/2505.16421) | EMNLP 2025 | Web | End-to-end online RL on browser interactions. |
 | priority | [BacktrackAgent: Enhancing GUI Agent with Error Detection and Backtracking Mechanism](https://arxiv.org/abs/2505.20660) | EMNLP 2025 Oral | Mobile | Explicit error detection, reflection, and backtracking. |
+| watch | [Video-Based Reward Modeling for Computer-Use Agents](https://arxiv.org/abs/2603.10178) | arXiv 2026 | Desktop, mobile / video | Uses execution video to score success and provide temporal attribution for computer-use trajectories. |
+| watch | [ShowUI-Aloha: Human-Taught GUI Agent](https://arxiv.org/abs/2601.07181) | arXiv 2026 | Desktop / demonstration | Converts in-the-wild desktop screen recordings into structured teaching trajectories. |
+| watch | [VideoAgentTrek: Computer Use Pretraining from Unlabeled Videos](https://arxiv.org/abs/2510.19488) | arXiv 2025 | General GUI / video | Mines tutorial videos and recovers action boundaries for computer-use pretraining. |
 | verify | [ScaleCUA: Scaling Open-Source Computer Use Agents with Cross-Platform Data](https://arxiv.org/abs/2509.15221) | ICLR 2026 Oral (verify) | Desktop, mobile, web | Cross-platform open CUA data and model scaling. |
 | verify | [ComputerRL: Scaling End-to-End Online Reinforcement Learning for Computer Use Agents](https://arxiv.org/abs/2508.14040) | ICLR 2026 (verify) | Desktop | Online RL over parallel virtual desktops. |
 | verify | [MobileRL: Online Agentic Reinforcement Learning for Mobile GUI Agents](https://arxiv.org/abs/2509.18119) | ICLR 2026 (verify) | Mobile | Online RL for AndroidWorld/AndroidLab style agents. |
@@ -148,6 +153,7 @@ These are too relevant to ignore, but should be verified before we treat them as
 | watch | [WebPilot: A Versatile and Autonomous Multi-Agent System for Web Task Execution with Strategic Exploration](https://ojs.aaai.org/index.php/AAAI/article/view/34505) | Web | Planning plus MCTS execution for web agents. |
 | watch | [Agent Workflow Memory](https://proceedings.mlr.press/v267/wang25bx.html) | Web | Reusable workflow memory from past trajectories. |
 | watch | [Magentic-UI: Towards Human-in-the-loop Agentic Systems](https://arxiv.org/abs/2507.22358) | Human-in-loop | Human oversight and mixed-initiative GUI agent systems. |
+| watch | [Video/VLM transition route](video-vlm-to-gui-agent.md) | Reading guide | Internal map for screen recordings, execution-video rewards, GUI world models, and temporal compression. |
 
 ## Reading Priorities
 
@@ -161,6 +167,12 @@ First pass:
 Second pass:
 
 1. UI-TARS, OpenCUA, ScaleCUA, UI-Venus, Mobile-Agent-v3.
-2. OS-Genesis, ANCHOR, CUA-Suite, UI-TARS-2, ComputerRL, MobileRL.
+2. OS-Genesis, ANCHOR, CUA-Suite, ShowUI-Aloha, VideoAgentTrek, Watch and Learn, UI-TARS-2, ComputerRL, MobileRL.
 3. Magentic-UI, VeriOS, AgentSentinel, RedTeamCUA.
 4. WebArena, OSWorld, AndroidWorld, WorkArena, Windows Agent Arena, ScreenSpot-Pro only as experiment substrates for the methods above.
+
+Video/VLM transition pass:
+
+1. VideoGUI, VideoWebArena, ShowUI, ShowUI-Aloha, Video-Based Reward Modeling for Computer-Use Agents.
+2. VideoAgentTrek, Watch and Learn, CUA-Suite, BacktrackAgent, WebDreamer.
+3. ProgRM, Web-Shepherd, GUI-KV, MobileDreamer, Code2World.
