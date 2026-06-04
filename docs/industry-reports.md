@@ -2,7 +2,7 @@
 
 This file tracks industry-facing technical reports, model releases, products, and open-source systems relevant to GUI agents and computer-use agents.
 
-The boundary is intentionally practical: include a report or system when it changes what we might use, reproduce, benchmark, or compare against.
+The boundary is intentionally practical: include a report or system when it changes what we might use, reproduce, compare against, or build on. Benchmark claims are recorded as evidence, but the reading priority is the underlying mechanism.
 
 Status labels:
 
@@ -87,13 +87,15 @@ Status labels:
 Immediate reading:
 
 1. UI-TARS, OpenCUA, ScaleCUA, OS-ATLAS, ShowUI, Aguvis.
-2. OpenAI CUA, Anthropic computer use, Google Project Mariner.
-3. trycua/cua, OmniParser, BrowserGym, OSWorld, AndroidWorld.
-4. RedTeamCUA, OS-Harm, AgentDAM, popup attacks.
+2. UI-TARS-2, ComputerRL, MobileRL, AutoGLM, Mobile-Agent-v3.
+3. OpenAI CUA, Anthropic computer use, Google Project Mariner, Magentic-UI.
+4. OmniParser, trycua/cua, BrowserGym, LiteCUA, ToolCUA.
+5. RedTeamCUA, OS-Harm, AgentDAM, popup attacks, VeriOS, AgentSentinel.
 
 Immediate testing:
 
 1. Run a minimal CUA loop with `openai/openai-cua-sample-app`.
 2. Test `trycua/cua` sandbox setup locally.
-3. Run OmniParser on OSWorld/desktop screenshots.
-4. Compare BrowserGym/WebArena setup cost against OSWorld and AndroidWorld.
+3. Run OmniParser on desktop/web/mobile screenshots to inspect representation quality.
+4. Compare GUI-only, parser-assisted, and structured-tool action loops on one small workflow.
+5. Use OSWorld, AndroidWorld, BrowserGym, or WebArena only after choosing the mechanism to test.

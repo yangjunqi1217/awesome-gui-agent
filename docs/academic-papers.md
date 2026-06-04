@@ -4,7 +4,8 @@ This is a curated academic entry map for GUI agents, computer-use agents, web ag
 
 Scope:
 
-- Prefer top venues and high-impact benchmark/model papers.
+- Prefer top venues and high-impact method/model papers.
+- Keep benchmark and dataset papers as evaluation evidence for method papers, not as the main research agenda.
 - Include strong arXiv/preprint candidates only when they look central to the field.
 - Mark uncertain or very recent items as `verify` instead of pretending the venue/status is settled.
 
@@ -39,7 +40,9 @@ Status labels:
 | priority | [WebArena: A Realistic Web Environment for Building Autonomous Agents](https://arxiv.org/abs/2307.13854) | ICLR 2024 | Web | Realistic self-hosted web-agent benchmark. |
 | watch | [Synapse: Trajectory-as-Exemplar Prompting with Memory for Computer Control](https://arxiv.org/abs/2306.07863) | ICLR 2024 | Desktop / web | Memory and trajectory-as-exemplar prompting for computer control. |
 
-## Benchmarks And Evaluation
+## Evaluation Papers And Experimental Substrates
+
+Read these after the relevant method papers, mainly to understand experimental setup, failure labels, action spaces, and reproducibility constraints.
 
 | Status | Paper | Venue / year | Environment | Why It Matters |
 | --- | --- | --- | --- | --- |
@@ -150,13 +153,14 @@ These are too relevant to ignore, but should be verified before we treat them as
 
 First pass:
 
-1. OSWorld, WebArena, VisualWebArena, AndroidWorld, WorkArena, Windows Agent Arena.
-2. SeeClick, OS-ATLAS, ShowUI, Aguvis, Agent S.
-3. WebRL, ExACT, DigiRL, Web-Shepherd, GUI-G1.
-4. OS-HARM, RedTeamCUA, AgentDAM, Attacking VLM Computer Agents via Pop-ups.
+1. ScreenAI, Ferret-UI, SeeClick, OS-ATLAS, ShowUI, Aguvis, Agent S.
+2. ExACT, BacktrackAgent, WebDreamer, Agent Workflow Memory, GUI-explorer.
+3. DigiRL, WebRL, Web-Shepherd, GUI-G1, WebAgent-R1.
+4. EIA, AgentDAM, Progent, Attacking VLM Computer Agents via Pop-ups, OS-HARM.
 
 Second pass:
 
-1. WebLINX, WorkArena++, VideoGUI, VideoWebArena, ScienceBoard.
-2. UI-TARS, OpenCUA, ScaleCUA, UI-Venus, Mobile-Agent-v3.
-3. BrowserGym, OmniParser, Agent-E, Agent Workflow Memory.
+1. UI-TARS, OpenCUA, ScaleCUA, UI-Venus, Mobile-Agent-v3.
+2. OS-Genesis, ANCHOR, CUA-Suite, UI-TARS-2, ComputerRL, MobileRL.
+3. Magentic-UI, VeriOS, AgentSentinel, RedTeamCUA.
+4. WebArena, OSWorld, AndroidWorld, WorkArena, Windows Agent Arena, ScreenSpot-Pro only as experiment substrates for the methods above.

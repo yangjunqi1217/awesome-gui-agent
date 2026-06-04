@@ -2,7 +2,7 @@
 
 Private reading hub for GUI agents, computer-use agents, browser agents, mobile-use agents, and GUI safety.
 
-This repository is for our own reading notes and research tracking. It is not meant to replace the public awesome lists. Public lists are good for breadth; this repo should keep the smaller set of papers, repos, benchmarks, and products that we actually read, evaluate, or plan to use.
+This repository is for our own reading notes and research tracking. It is not meant to replace the public awesome lists. Public lists are good for breadth; this repo should keep the smaller set of papers, repos, experimental substrates, and products that we actually read, evaluate, or plan to use.
 
 ## Scope
 
@@ -10,7 +10,7 @@ GUI agents are agents that observe and operate graphical interfaces: desktop OSe
 
 - **Perception and grounding**: screenshots, UI parsing, element localization, coordinates, OCR, accessibility trees.
 - **Planning and control**: long-horizon task decomposition, reflection, memory, recovery, tool use, action spaces.
-- **Benchmarks and evaluation**: OS, browser, mobile, grounding, web, safety, and task-efficiency benchmarks.
+- **Evaluation evidence**: OS, browser, mobile, grounding, web, safety, and task-efficiency benchmarks, recorded as experiment context rather than research directions.
 - **Training data and learning**: demonstrations, synthetic task generation, RL/RLVR, reward models, distillation.
 - **Safety and reliability**: prompt injection, adversarial UI, privacy, irreversible actions, permission boundaries.
 - **Products and infra**: local/remote desktops, browser-use stacks, sandboxes, CUA APIs, agent SDKs.
@@ -19,7 +19,7 @@ See [docs/taxonomy.md](docs/taxonomy.md) for the working taxonomy.
 
 ## How We Use This Repo
 
-1. Add candidate papers, repos, and benchmarks to the relevant watchlist below.
+1. Add candidate papers, repos, and experimental substrates to the relevant watchlist below.
 2. When someone reads something seriously, create a note from [notes/templates/paper-note.md](notes/templates/paper-note.md) or [notes/templates/repo-note.md](notes/templates/repo-note.md).
 3. Link the note from this README under the relevant section.
 4. Keep notes opinionated: what problem it solves, why it matters, how convincing it is, and what we should do next.
@@ -32,12 +32,15 @@ Naming convention:
 
 ## Curated Maps
 
-The two highest-signal entry points are:
+High-signal entry points are:
 
 - [docs/academic-papers.md](docs/academic-papers.md): top-venue and high-impact academic paper map.
 - [docs/industry-reports.md](docs/industry-reports.md): industry technical reports, products, open-source systems, sandboxes, and guardrails.
+- [docs/gui-paper-landscape.md](docs/gui-paper-landscape.md): GUI paper families organized by research mechanism.
+- [docs/method-paper-shortlist.md](docs/method-paper-shortlist.md): mechanism-first shortlist of GUI papers and technical reports to read next.
 - [docs/venue-index.md](docs/venue-index.md): papers organized by venue and year.
 - [docs/reading-roadmap.md](docs/reading-roadmap.md): suggested reading paths by research track.
+- [docs/research-questions.md](docs/research-questions.md): non-benchmark research problem clusters.
 
 Use [docs/taxonomy.md](docs/taxonomy.md) to classify new entries and [docs/source-map.md](docs/source-map.md) to find upstream discovery sources.
 
@@ -55,26 +58,14 @@ More detail is in [docs/source-map.md](docs/source-map.md).
 
 ## Core Reading Queue
 
+This queue is paper-family-first. Evaluation papers are included because methods use them in experiments, not because we want a new benchmark as the main contribution.
+
 ### Surveys And Framing
 
 - [ ] [GUI Agents with Foundation Models: A Comprehensive Survey](https://arxiv.org/abs/2411.04890).
 - [ ] [GUI Agents: A Survey](https://arxiv.org/abs/2412.13501).
 - [ ] [OS Agents: A Survey on MLLM-based Agents for Computer, Phone and Browser Use](https://aclanthology.org/2025.acl-long.369/).
 - [ ] [Towards Trustworthy GUI Agents: A Survey](https://arxiv.org/abs/2503.23434).
-
-### Benchmarks
-
-- [ ] [OSWorld](https://github.com/xlang-ai/OSWorld): open-ended desktop tasks in real computer environments.
-- [ ] [WebArena](https://github.com/web-arena-x/webarena): realistic web environment for autonomous agents.
-- [ ] [VisualWebArena](https://aclanthology.org/2024.acl-long.50/): visually grounded web-agent tasks.
-- [ ] [AndroidWorld](https://github.com/google-research/android_world): Android environment and benchmark for autonomous agents.
-- [ ] [WorkArena](https://proceedings.mlr.press/v235/drouin24a.html): enterprise knowledge-work benchmark.
-- [ ] [Windows Agent Arena](https://github.com/microsoft/WindowsAgentArena): Windows OS-agent benchmark.
-- [ ] [ScreenSpot-Pro](https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding): professional high-resolution GUI grounding.
-- [ ] [OSWorld-G](https://github.com/xlang-ai/OSWorld-G): grounding-focused OSWorld extension.
-- [ ] [VideoGUI](https://proceedings.neurips.cc/paper_files/paper/2024/hash/804e757b7d7043c26701c3a313032101-Abstract-Datasets_and_Benchmarks_Track.html): GUI automation from instructional videos.
-- [ ] [RiOSWorld](https://github.com/yjyddq/RiOSWorld): risk benchmark for multimodal computer-use agents.
-- [ ] [OS-Harm](https://github.com/tml-epfl/os-harm): safety benchmark for computer-use agents.
 
 ### Models And Agents
 
@@ -121,6 +112,22 @@ More detail is in [docs/source-map.md](docs/source-map.md).
 - [ ] [ST-WebAgentBench](https://openreview.net/forum?id=MuCDzH0ctf): safety and trustworthiness in web agents.
 - [ ] Prompt-injection, malicious UI, and environmental injection attacks against browser/computer-use agents.
 
+### Evaluation Papers And Experimental Substrates
+
+Read these when inspecting a method paper's experimental section. They are not the starting point for choosing our research direction.
+
+- [ ] [OSWorld](https://github.com/xlang-ai/OSWorld): open-ended desktop tasks in real computer environments.
+- [ ] [WebArena](https://github.com/web-arena-x/webarena): realistic web environment for autonomous agents.
+- [ ] [VisualWebArena](https://aclanthology.org/2024.acl-long.50/): visually grounded web-agent tasks.
+- [ ] [AndroidWorld](https://github.com/google-research/android_world): Android environment and benchmark for autonomous agents.
+- [ ] [WorkArena](https://proceedings.mlr.press/v235/drouin24a.html): enterprise knowledge-work benchmark.
+- [ ] [Windows Agent Arena](https://github.com/microsoft/WindowsAgentArena): Windows OS-agent benchmark.
+- [ ] [ScreenSpot-Pro](https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding): professional high-resolution GUI grounding.
+- [ ] [OSWorld-G](https://github.com/xlang-ai/OSWorld-G): grounding-focused OSWorld extension.
+- [ ] [VideoGUI](https://proceedings.neurips.cc/paper_files/paper/2024/hash/804e757b7d7043c26701c3a313032101-Abstract-Datasets_and_Benchmarks_Track.html): GUI automation from instructional videos.
+- [ ] [RiOSWorld](https://github.com/yjyddq/RiOSWorld): risk benchmark for multimodal computer-use agents.
+- [ ] [OS-Harm](https://github.com/tml-epfl/os-harm): safety benchmark for computer-use agents.
+
 ## Notes Index
 
 ### Papers
@@ -140,8 +147,11 @@ More detail is in [docs/source-map.md](docs/source-map.md).
 
 - [Academic paper map](docs/academic-papers.md)
 - [Industry technical reports](docs/industry-reports.md)
+- [GUI paper landscape](docs/gui-paper-landscape.md)
+- [Method paper shortlist](docs/method-paper-shortlist.md)
 - [Venue and year index](docs/venue-index.md)
 - [Reading roadmap](docs/reading-roadmap.md)
+- [Research questions beyond benchmarks](docs/research-questions.md)
 - [Public source map](docs/source-map.md)
 - [Working taxonomy](docs/taxonomy.md)
 

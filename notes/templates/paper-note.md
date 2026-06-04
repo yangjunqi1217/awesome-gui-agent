@@ -6,6 +6,10 @@
 - **Links**:
 - **Tags**:
 - **Status**: `candidate | skimmed | read | reproduced | archived`
+- **Paper family**:
+- **GUI representation**:
+- **Action representation**:
+- **Training / inference signal**:
 
 ## One-line Takeaway
 
@@ -19,9 +23,18 @@ What problem does it solve, and why does this matter for GUI agents?
 
 Summarize the core idea in our own words.
 
+## GUI-Agent Mechanism
+
+- Representation assumption:
+- Grounding or action mechanism:
+- Planning / recovery / memory mechanism:
+- Safety or trust-boundary mechanism:
+- What failure mode it targets:
+
 ## Evidence
 
-- Benchmark/setup:
+- Benchmarks used as evidence:
+- Experimental setup:
 - Main metrics:
 - Baselines:
 - Strongest result:
@@ -41,6 +54,7 @@ What assumptions, missing baselines, data leakage risks, evaluation gaps, or rep
 - Reproduce:
 - Cite:
 - Ignore/watch:
+- Related research question:
 
 ## Follow-ups
 

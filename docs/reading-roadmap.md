@@ -1,69 +1,70 @@
 # Reading Roadmap
 
-This roadmap is ordered by what will make future reading easier. It is not a ranking of paper quality.
+This roadmap is ordered by GUI-agent paper families. It is not a plan to build a new benchmark. Benchmarks are recorded only as experimental evidence used by papers.
 
-## Track 1: Benchmarks First
+Start with [gui-paper-landscape.md](gui-paper-landscape.md), use [method-paper-shortlist.md](method-paper-shortlist.md) to choose papers, then use [research-questions.md](research-questions.md) to choose a non-benchmark research direction.
 
-Goal: understand what "success" means across web, desktop, and mobile.
+## Track 1: GUI Representation And Grounding
 
-Read in order:
-
-1. [WebArena](../notes/papers/2023-webarena.md)
-2. [VisualWebArena](https://aclanthology.org/2024.acl-long.50/)
-3. [OSWorld](../notes/papers/2024-osworld.md)
-4. [AndroidWorld](../notes/papers/2024-androidworld.md)
-5. [WorkArena](https://proceedings.mlr.press/v235/drouin24a.html)
-6. [Windows Agent Arena](https://proceedings.mlr.press/v267/bonatti25a.html)
-7. [OS-HARM](https://arxiv.org/abs/2503.18492)
-
-Questions to answer:
-
-- What is the observation/action space?
-- How is task success checked?
-- Can results be reproduced without hidden manual judgment?
-- What failures dominate: grounding, planning, app state, memory, safety, or evaluation brittleness?
-
-## Track 2: Grounding And UI Perception
-
-Goal: understand the screen-to-action bottleneck.
+Goal: understand how papers represent the GUI and map language to UI targets.
 
 Read in order:
 
-1. [SeeClick](https://aclanthology.org/2024.acl-long.505/)
-2. [ScreenAI](https://www.ijcai.org/proceedings/2024/339)
-3. [Ferret-UI](https://eccv.ecva.net/virtual/2024/poster/749)
+1. [ScreenAI](https://www.ijcai.org/proceedings/2024/339)
+2. [Ferret-UI](https://eccv.ecva.net/virtual/2024/poster/749)
+3. [SeeClick](../notes/papers/2024-seeclick.md)
 4. [OmniParser](../notes/repos/microsoft-omniparser.md)
-5. [OS-ATLAS](https://arxiv.org/abs/2410.23218)
-6. [ShowUI](https://openaccess.thecvf.com/content/CVPR2025/html/Lin_ShowUI_One_Vision-Language-Action_Model_for_GUI_Visual_Agent_CVPR_2025_paper.html)
+5. [OS-ATLAS](../notes/papers/2024-os-atlas.md)
+6. [ShowUI](../notes/papers/2025-showui.md)
 7. [ScreenSpot-Pro](../notes/papers/2025-screenspot-pro.md)
-8. [OSWorld-G / Jedi](https://arxiv.org/abs/2505.13227)
 
 Questions to answer:
 
-- Does the method rely on screenshot-only, UI tree, OCR, DOM, or hybrid state?
-- Is grounding evaluated as points, boxes, element IDs, or action success?
-- Does better grounding transfer into end-to-end task success?
-- What breaks on dense professional software?
+- What GUI representation does the paper assume?
+- Is the output a point, box, element, action, or structured state?
+- Does the method solve perception, grounding, or action prediction?
+- Which benchmarks are used only as evidence?
 
-## Track 3: Agent Architecture And Memory
+## Track 2: Action Models And Planning
 
-Goal: understand how agents plan, recover, and reuse experience.
+Goal: understand how GUI papers model actions, state, planning, and recovery.
 
 Read in order:
 
 1. [GPT-4V is a Generalist Web Agent, if Grounded](https://proceedings.mlr.press/v235/zheng24e.html)
-2. [Agent S](https://proceedings.iclr.cc/paper_files/paper/2025/hash/394c7c30ea87b5c3521b4d9e9d419071-Abstract-Conference.html)
+2. [Agent S](../notes/papers/2025-agent-s.md)
 3. [ExACT](https://proceedings.iclr.cc/paper_files/paper/2025/hash/a3b893ba1de12f76020b03f7ae8e1afd-Abstract-Conference.html)
-4. [Agent Workflow Memory](https://proceedings.mlr.press/v267/wang25bx.html)
-5. [BacktrackAgent](https://arxiv.org/abs/2505.20660)
-6. [UI-Evol](https://arxiv.org/abs/2505.21964)
+4. [BacktrackAgent](https://arxiv.org/abs/2505.20660)
+5. [WebDreamer](https://openreview.net/forum?id=c6l7yA0HSq)
+6. [UI-TARS](../notes/papers/2025-ui-tars.md)
+7. [OpenCUA](../notes/papers/2025-opencua.md)
 
 Questions to answer:
 
-- Is the agent reactive, planner-executor, tree-search, memory-augmented, or specialist-generalist?
-- How does it detect failures?
-- Does it backtrack safely?
-- Does memory store trajectories, reusable skills, state abstractions, or natural-language procedures?
+- What is the action representation?
+- Is planning explicit or implicit?
+- How does the agent detect it is off-track?
+- Is recovery part of the method or just an observed failure mode?
+
+## Track 3: Memory, Skills, And Data
+
+Goal: understand how GUI papers reuse experience and construct training data.
+
+Read in order:
+
+1. [Agent Workflow Memory](https://proceedings.mlr.press/v267/wang25bx.html)
+2. [Synapse](https://arxiv.org/abs/2306.07863)
+3. [GUI-explorer](https://aclanthology.org/2025.acl-long.282/)
+4. [OS-Genesis](https://aclanthology.org/2025.acl-long.277/)
+5. [UI-TARS-2](https://arxiv.org/abs/2509.02544)
+6. [CUA-Suite](https://arxiv.org/abs/2603.24440)
+
+Questions to answer:
+
+- What is remembered or generated?
+- How is memory retrieved or invalidated?
+- How is data quality checked?
+- Does more data improve robustness or only benchmark fit?
 
 ## Track 4: Learning, RL, And Reward Models
 
@@ -133,12 +134,12 @@ Questions to answer:
 
 Week 1:
 
-1. Read WebArena, VisualWebArena, OSWorld, AndroidWorld.
-2. Fill notes for all four.
-3. Run no code except benchmark setup inspection.
+1. Read ScreenAI, Ferret-UI, SeeClick, OmniParser, OS-ATLAS.
+2. Fill notes for all five.
+3. Extract GUI representation and grounding assumptions; do not design a new benchmark.
 
 Week 2:
 
-1. Read SeeClick, OS-ATLAS, ShowUI, Agent S.
-2. Test OmniParser on 10 screenshots from desktop/web/mobile.
-3. Decide whether our first reproduction should be grounding-only, browser-only, or OSWorld-style.
+1. Read ShowUI, Agent S, WebRL, BacktrackAgent.
+2. Extract method families and failure assumptions.
+3. Decide whether our first project should target recovery, progress rewards, hybrid action routing, trust boundaries, or efficient perception.
