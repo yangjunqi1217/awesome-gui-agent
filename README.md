@@ -36,6 +36,8 @@ The two highest-signal entry points are:
 
 - [docs/academic-papers.md](docs/academic-papers.md): top-venue and high-impact academic paper map.
 - [docs/industry-reports.md](docs/industry-reports.md): industry technical reports, products, open-source systems, sandboxes, and guardrails.
+- [docs/venue-index.md](docs/venue-index.md): papers organized by venue and year.
+- [docs/reading-roadmap.md](docs/reading-roadmap.md): suggested reading paths by research track.
 
 Use [docs/taxonomy.md](docs/taxonomy.md) to classify new entries and [docs/source-map.md](docs/source-map.md) to find upstream discovery sources.
 
@@ -127,11 +129,19 @@ More detail is in [docs/source-map.md](docs/source-map.md).
 - [WebArena](notes/papers/2023-webarena.md)
 - [AndroidWorld](notes/papers/2024-androidworld.md)
 - [ScreenSpot-Pro](notes/papers/2025-screenspot-pro.md)
+- [SeeClick](notes/papers/2024-seeclick.md)
+- [OS-ATLAS](notes/papers/2024-os-atlas.md)
+- [ShowUI](notes/papers/2025-showui.md)
+- [Agent S](notes/papers/2025-agent-s.md)
+- [UI-TARS](notes/papers/2025-ui-tars.md)
+- [OpenCUA](notes/papers/2025-opencua.md)
 
 ### Repos And Systems
 
 - [Academic paper map](docs/academic-papers.md)
 - [Industry technical reports](docs/industry-reports.md)
+- [Venue and year index](docs/venue-index.md)
+- [Reading roadmap](docs/reading-roadmap.md)
 - [Public source map](docs/source-map.md)
 - [Working taxonomy](docs/taxonomy.md)
 

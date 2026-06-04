@@ -25,9 +25,43 @@ WebArena provides self-hosted websites and tasks that require multi-step web int
 - How much agents can rely on DOM/accessibility vs screenshot.
 - Common failure modes: search, state tracking, form filling, instruction following, hidden dependencies.
 
+## Evaluation Lens
+
+Use WebArena to answer web-agent questions:
+
+- Can an agent complete realistic multi-step web tasks in stateful websites?
+- Does it plan over account state, forms, search, shopping, forums, and content management?
+- How much does structured browser state help relative to screenshots?
+- Are failures caused by exploration, form semantics, hidden state, or final-answer verification?
+
+Do not use WebArena alone to answer:
+
+- Visual grounding under screenshots. Use VisualWebArena or ScreenSpot-style tasks.
+- Live-web robustness. Use WebCanvas, WebVoyager, or online evaluations.
+- Desktop/multi-app workflow capability. Use OSWorld or WindowsAgentArena.
+
+## Reproduction Notes
+
+Likely costs and risks:
+
+- Self-hosted web environments require setup and seeded data.
+- Browser automation details can affect action success.
+- Some results may rely on DOM pruning, accessibility trees, or customized action abstractions.
+- The benchmark can reward website-specific heuristics if not evaluated carefully.
+
+Minimal reproduction target:
+
+1. Run the environment locally and complete one task manually.
+2. Run a baseline agent on 5-10 tasks with full trajectory logs.
+3. Compare screenshot-only, DOM-based, and accessibility-tree observations if feasible.
+
 ## Why It Matters To Us
 
 WebArena is the web-control counterpart to OSWorld. It is useful for browser-only baselines, but we should separate WebArena progress from OS-level GUI progress.
+
+## Decision
+
+Keep as the default browser-agent benchmark. Pair it with VisualWebArena for visual grounding and with safety benchmarks for prompt-injection risk.
 
 ## Follow-ups
 
