@@ -1,11 +1,11 @@
 # Awesome GUI Agent [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) <!-- omit in toc -->
 
-## [GUI Agents with Foundation Models: A Mechanism-First Reading Map](docs/gui-paper-landscape.md)
-### :star: News! A Living Handbook for GUI Agents, Computer-Use Agents, and UI Automation
+## [A Mechanism-First Reading Hub For GUI Agents](docs/gui-paper-landscape.md)
+### :star: News! GUI Agents, Computer-Use Agents, and UI Automation Are Moving Fast
 
-This repository organizes papers, reports, projects, and resources related to Graphical User Interface (GUI) agents, computer-use agents (CUA), web agents, mobile agents, and UI grounding.
+This repository curates papers, reports, projects, datasets, benchmarks, and infrastructure for Graphical User Interface (GUI) agents, computer-use agents (CUA), browser agents, mobile agents, and UI grounding.
 
-[Reading Map](docs/gui-paper-landscape.md). This is a mechanism-first guide to the fast-moving GUI-agent literature. It tracks how agents perceive screens, ground UI elements, plan actions, recover from mistakes, learn from trajectories, use reward models, and stay safe in real computer environments.
+The goal is not to mirror every new list. The goal is to keep a field-facing map of the mechanisms that make GUI agents work: screen representation, UI grounding, action modeling, planning, recovery, memory, trajectory generation, reward learning, safety, and execution infrastructure.
 
 🔍 Key observations:
 
@@ -25,22 +25,40 @@ This repository organizes papers, reports, projects, and resources related to Gr
 
 ----
 
-GUI agents are agents that operate computers, phones, browsers, and applications through visual interfaces, accessibility trees, DOMs, APIs, and low-level mouse or keyboard actions.
-
-The field connects vision-language models, UI understanding, embodied digital interaction, planning, reinforcement learning, human-agent interaction, security, and software infrastructure. The core question is not only whether an agent can pass a benchmark, but which mechanism makes it more reliable, transferable, efficient, and trustworthy.
-
-Profile-specific reading plans are kept separately under [`roadmaps/`](roadmaps/) so the root list stays field-facing and free of personal identifiers.
-
 #### :books: How to read?
-The main contribution of a GUI-agent paper is usually one of the following: **representation**, **grounding**, **action modeling**, **planning**, **recovery**, **memory**, **trajectory generation**, **reward modeling**, **safety**, or **execution infrastructure**.
+When reading a GUI-agent paper, first identify the paper family and mechanism:
 
-Benchmark and dataset papers are included because they reveal action spaces, failure labels, evaluation protocols, and reproducibility constraints. They should be read as evidence for mechanisms, not as the default source of new research questions.
+✅ **Representation**: screenshot, OCR, accessibility tree, DOM, UI hierarchy, video, or mixed state.
 
-The paper lists below are grouped by mechanism. Within each category, newer or higher-signal papers are kept near the top when possible.
+✅ **Grounding**: coordinates, boxes, element IDs, UI regions, zooming, or parsing.
+
+✅ **Action modeling**: low-level mouse and keyboard actions, structured GUI commands, tool calls, or hybrid actions.
+
+✅ **Planning and recovery**: state tracking, progress estimation, backtracking, verification, and failure repair.
+
+✅ **Learning signal**: demonstrations, synthetic trajectories, videos, reward models, RL, or self-improvement.
+
+✅ **Safety model**: trust boundaries, confirmations, containment, audit logs, and adversarial UI behavior.
+
+Benchmark and dataset papers are included because they reveal action spaces, failure labels, evaluation protocols, and reproducibility constraints. They should be read as evidence for mechanisms, not as the research agenda itself.
+
+#### :card_index_dividers: Start here
+
+| Goal | Entry Point |
+| --- | --- |
+| Understand the field structure | [GUI paper landscape](docs/gui-paper-landscape.md) |
+| Choose a reading order | [Reading roadmap](docs/reading-roadmap.md) |
+| Find high-priority method papers | [Method paper shortlist](docs/method-paper-shortlist.md) |
+| Compare models, products, and infrastructure | [Model zoo and system map](docs/model-zoo.md) |
+| Track academic papers and venues | [Academic paper map](docs/academic-papers.md), [venue index](docs/venue-index.md) |
+| Track industry systems and APIs | [Industry technical reports](docs/industry-reports.md) |
+| Develop research directions | [Research questions](docs/research-questions.md) |
+| Understand source intake | [Source map](docs/source-map.md) |
+| Add or review resources | [Contributing guide](CONTRIBUTING.md), [notes workflow](notes/) |
 
 #### :high_brightness: This project is still on-going, pull requests are welcomed!!
 
-If you find missing papers, reports, projects, datasets, or metadata errors, please open an issue or pull request. A title plus URL is already useful; detailed notes can go into `notes/`.
+If you find missing papers, reports, projects, datasets, or metadata errors, please open an issue or pull request. A title plus URL is already useful; deeper evaluation can go into `notes/`.
 
 #### :star: If you find this repo useful, please star it!!!
 
@@ -129,6 +147,9 @@ If you find missing papers, reports, projects, datasets, or metadata errors, ple
 + **AutoGLM** [AutoGLM: Autonomous Foundation Agents for GUIs](https://arxiv.org/abs/2411.00820) (Nov. 2024)
   [![arXiv](https://img.shields.io/badge/arXiv-b31b1b.svg)](https://arxiv.org/abs/2411.00820)
 
++ **Magentic-UI** [Magentic-UI: Towards Human-in-the-loop Agentic Systems](https://arxiv.org/abs/2507.22358) (Jul. 2025, Microsoft Research)
+  [![arXiv](https://img.shields.io/badge/arXiv-b31b1b.svg)](https://arxiv.org/abs/2507.22358)
+
 ### Video Demonstrations & Trajectories
 + **CUA-Suite** [CUA-Suite: Massive Human-annotated Video Demonstrations for Computer-Use Agents](https://arxiv.org/abs/2603.24440) (Mar. 2026)
   [![arXiv](https://img.shields.io/badge/arXiv-b31b1b.svg)](https://arxiv.org/abs/2603.24440)
@@ -173,6 +194,15 @@ If you find missing papers, reports, projects, datasets, or metadata errors, ple
 + **Synapse** [Synapse: Trajectory-as-Exemplar Prompting with Memory for Computer Control](https://arxiv.org/abs/2306.07863) (Jan. 2024, ICLR 2024)
   [![arXiv](https://img.shields.io/badge/arXiv-b31b1b.svg)](https://arxiv.org/abs/2306.07863)
 
++ **MobileDreamer** [MobileDreamer: Generative Sketch World Model for GUI Agent](https://arxiv.org/abs/2601.04035) (Jan. 2026)
+  [![arXiv](https://img.shields.io/badge/arXiv-b31b1b.svg)](https://arxiv.org/abs/2601.04035)
+
++ **Code2World** [Code2World: A GUI World Model via Renderable Code Generation](https://arxiv.org/abs/2602.09856) (Feb. 2026)
+  [![arXiv](https://img.shields.io/badge/arXiv-b31b1b.svg)](https://arxiv.org/abs/2602.09856)
+
++ **DynaWeb** [DynaWeb: Model-Based Reinforcement Learning of Web Agents](https://arxiv.org/abs/2601.22149) (Jan. 2026)
+  [![arXiv](https://img.shields.io/badge/arXiv-b31b1b.svg)](https://arxiv.org/abs/2601.22149)
+
 ### Training, RL & Reward Models
 + **ComputerRL** [ComputerRL: Scaling End-to-End Online Reinforcement Learning for Computer Use Agents](https://arxiv.org/abs/2508.14040) (Aug. 2025)
   [![arXiv](https://img.shields.io/badge/arXiv-b31b1b.svg)](https://arxiv.org/abs/2508.14040)
@@ -198,6 +228,9 @@ If you find missing papers, reports, projects, datasets, or metadata errors, ple
 + **OS-Genesis** [OS-Genesis: Automating GUI Agent Trajectory Construction via Reverse Task Synthesis](https://aclanthology.org/2025.acl-long.277/) (Jul. 2025, ACL 2025)
   [![ACL](https://img.shields.io/badge/ACL-2025-blue)](https://aclanthology.org/2025.acl-long.277/)
 
++ **ANCHOR** [ANCHOR: Branch-point Trajectory Expansion for GUI-Agent Data Generation](https://arxiv.org/abs/2602.07153) (Feb. 2026)
+  [![arXiv](https://img.shields.io/badge/arXiv-b31b1b.svg)](https://arxiv.org/abs/2602.07153)
+
 ### Safety & Trust
 + **RedTeamCUA** [RedTeamCUA: Realistic Adversarial Testing of Computer-Use Agents in Hybrid Web-OS Environments](https://github.com/OSU-NLP-Group/RedTeamCUA) (2026)
   [![Star](https://img.shields.io/github/stars/OSU-NLP-Group/RedTeamCUA.svg?style=social&label=Star)](https://github.com/OSU-NLP-Group/RedTeamCUA)
@@ -220,6 +253,9 @@ If you find missing papers, reports, projects, datasets, or metadata errors, ple
 
 + **Progent** [Progent: Programmable Privilege Control for LLM Agents](https://arxiv.org/abs/2504.11703) (Apr. 2025)
   [![arXiv](https://img.shields.io/badge/arXiv-b31b1b.svg)](https://arxiv.org/abs/2504.11703)
+
++ **SafePred** [SafePred: A Predictive Guardrail for Computer-Using Agents via World Models](https://arxiv.org/abs/2602.01725) (Feb. 2026)
+  [![arXiv](https://img.shields.io/badge/arXiv-b31b1b.svg)](https://arxiv.org/abs/2602.01725)
 
 ### Products, APIs & Infrastructure
 + **OpenAI-CUA** [OpenAI Computer-Using Agent](https://openai.com/index/computer-using-agent/) (Jan. 2025)
