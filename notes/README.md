@@ -2,6 +2,17 @@
 
 Use `docs/academic-papers.md` and `docs/industry-reports.md` as the intake maps.
 
+Internal guides:
+
+- [Academic paper map](../docs/academic-papers.md)
+- [Industry technical reports](../docs/industry-reports.md)
+- [GUI paper landscape](../docs/gui-paper-landscape.md)
+- [Method paper shortlist](../docs/method-paper-shortlist.md)
+- [Reading roadmap](../docs/reading-roadmap.md)
+- [Research questions](../docs/research-questions.md)
+- [Source map](../docs/source-map.md)
+- [Working taxonomy](../docs/taxonomy.md)
+
 When we actually read an item:
 
 1. Copy the matching template from `notes/templates/`.

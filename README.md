@@ -14,10 +14,6 @@ The root list follows the usual Awesome-list style: only high-signal resources, 
 - [Safety and Trust](#safety-and-trust)
 - [Products, APIs, and Infrastructure](#products-apis-and-infrastructure)
 - [Evaluation Substrates](#evaluation-substrates)
-- [Internal Guides](#internal-guides)
-- [Related Lists](#related-lists)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Surveys
 
@@ -89,7 +85,7 @@ The root list follows the usual Awesome-list style: only high-signal resources, 
 ## Products, APIs, and Infrastructure
 
 - [OpenAI Computer-Using Agent](https://openai.com/index/computer-using-agent/) - CUA product direction and safety model for computer-use actions.
-- [openai/openai-cua-sample-app](https://github.com/openai/openai-cua-sample-app) - Sample app for experimenting with OpenAI CUA loops.
+- [OpenAI CUA sample app](https://github.com/openai/openai-cua-sample-app) - Sample app for experimenting with OpenAI CUA loops.
 - [Anthropic computer use](https://www.anthropic.com/news/3-5-models-and-computer-use) - Computer-use tool protocol and model release from Anthropic.
 - [Project Mariner](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/google-gemini-ai-update-december-2024/) - Google DeepMind browser-control product direction.
 - [trycua/cua](https://github.com/trycua/cua) - Sandboxes, SDKs, and virtualization infrastructure for computer-use agents.
@@ -113,16 +109,6 @@ Benchmarks are listed here as experimental substrates. They are useful for readi
 - [VideoGUI](https://proceedings.neurips.cc/paper_files/paper/2024/hash/804e757b7d7043c26701c3a313032101-Abstract-Datasets_and_Benchmarks_Track.html) - GUI automation benchmark from instructional videos.
 - [ScienceBoard](https://arxiv.org/abs/2505.19897) - Scientific-workflow benchmark with professional desktop software.
 
-## Internal Guides
-
-- [Academic paper map](docs/academic-papers.md) - Broader academic index organized by paper type, venue, and priority.
-- [Industry reports and systems](docs/industry-reports.md) - Technical reports, product APIs, open-source stacks, and guardrails.
-- [GUI paper landscape](docs/gui-paper-landscape.md) - Paper families organized by GUI-agent research mechanisms.
-- [Method paper shortlist](docs/method-paper-shortlist.md) - Mechanism-first reading shortlist for the next sprint.
-- [Reading roadmap](docs/reading-roadmap.md) - Reading order for representation, grounding, action models, learning, and safety.
-- [Research questions](docs/research-questions.md) - Non-benchmark research directions to consider.
-- [Notes workflow](notes/README.md) - How to create and maintain internal reading notes.
-
 ## Related Lists
 
 - [showlab/Awesome-GUI-Agent](https://github.com/showlab/Awesome-GUI-Agent) - Broad public list of GUI-agent papers, datasets, projects, and surveys.
@@ -134,7 +120,3 @@ Benchmarks are listed here as experimental substrates. They are useful for readi
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Add only resources we can recommend, keep descriptions factual, and put broad intake or speculative candidates in the docs instead of the root list.
-
-## License
-
-[CC0 1.0](LICENSE).
