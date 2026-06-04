@@ -6,6 +6,8 @@ This is a profile-specific reading and project roadmap. It intentionally avoids 
 
 The best match is not "build another GUI benchmark." The natural bridge is to treat GUI interaction as a temporally grounded video-and-action problem: infer intent from screen recordings, recover action boundaries, predict state deltas, judge whether progress happened, and compress long visual histories into the evidence an agent needs before acting.
 
+Related survey: [Execution-video reward and compression](../docs/execution-video-reward-and-compression.md). It collects execution-video reward modeling papers and GUI video/history compression papers.
+
 ## Why This Profile Transfers
 
 GUI agents observe a screen sequence, choose a low-level action, and then observe a changed screen. That makes many GUI-agent failures look like video-understanding failures:
@@ -61,6 +63,7 @@ Core question: can a model judge whether an agent made progress by watching the 
 - [Web-Shepherd](https://arxiv.org/abs/2505.15277)
 - [ProgRM](https://arxiv.org/abs/2505.18121)
 - [CUARewardBench](https://arxiv.org/abs/2510.18596)
+- [IntentScore](https://arxiv.org/abs/2604.05157)
 - [GUIDE](https://arxiv.org/abs/2603.25864)
 
 Good research angles:
@@ -108,11 +111,15 @@ Good research angles:
 
 Core question: how much visual history should the GUI agent keep?
 
+- [ReVision](https://arxiv.org/abs/2605.11212)
 - [GUI-KV](https://arxiv.org/abs/2510.00536)
+- [STaR-KV](https://arxiv.org/abs/2606.01790)
+- [Less is More](https://arxiv.org/abs/2507.03730)
 - [ShowUI](https://github.com/showlab/ShowUI)
 - [Agent Workflow Memory](https://proceedings.mlr.press/v267/wang25bx.html)
 - [MAGNET](https://arxiv.org/abs/2601.19199)
 - [A11y-Compressor](https://arxiv.org/abs/2605.00551)
+- [SecAgent](https://arxiv.org/abs/2603.08533)
 
 Good research angles:
 
@@ -142,6 +149,7 @@ Good research angles:
 5. **Keyframe memory for long-horizon computer use**
 
    Replace full screenshot histories with selected keyframes, UI deltas, and persistent workflow summaries. The aim is lower token cost without losing recovery-critical evidence.
+
 
 6. **Predictive safety from execution video**
 

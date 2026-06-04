@@ -107,6 +107,9 @@ Read these after the relevant method papers, mainly to understand experimental s
 | priority | [WebAgent-R1: Training Web Agents via End-to-End Multi-Turn Reinforcement Learning](https://arxiv.org/abs/2505.16421) | EMNLP 2025 | Web | End-to-end online RL on browser interactions. |
 | priority | [BacktrackAgent: Enhancing GUI Agent with Error Detection and Backtracking Mechanism](https://arxiv.org/abs/2505.20660) | EMNLP 2025 Oral | Mobile | Explicit error detection, reflection, and backtracking. |
 | watch | [Video-Based Reward Modeling for Computer-Use Agents](https://arxiv.org/abs/2603.10178) | arXiv 2026 | Desktop, mobile / video | Uses execution video to score success and provide temporal attribution for computer-use trajectories. |
+| watch | [ReVision: Scaling Computer-Use Agents via Temporal Visual Redundancy Reduction](https://arxiv.org/abs/2605.11212) | arXiv 2026 | Desktop / visual history compression | Removes redundant visual patches across consecutive screenshots for efficient CUA history use. |
+| watch | [STaR-KV: Spatio-Temporal Adaptive Re-weighting for KV Cache Compression in GUI Vision-Language Models](https://arxiv.org/abs/2606.01790) | arXiv 2026 | GUI VLM / KV compression | Compresses GUI VLM KV cache with spatio-temporal adaptive token weighting. |
+| watch | [IntentScore: Intent-Conditioned Action Evaluation for Computer-Use Agents](https://arxiv.org/abs/2604.05157) | arXiv 2026 | Desktop / reward model | Scores candidate GUI actions with plan-aware intent-conditioned reward modeling. |
 | watch | [ShowUI-Aloha: Human-Taught GUI Agent](https://arxiv.org/abs/2601.07181) | arXiv 2026 | Desktop / demonstration | Converts in-the-wild desktop screen recordings into structured teaching trajectories. |
 | watch | [VideoAgentTrek: Computer Use Pretraining from Unlabeled Videos](https://arxiv.org/abs/2510.19488) | arXiv 2025 | General GUI / video | Mines tutorial videos and recovers action boundaries for computer-use pretraining. |
 | verify | [ScaleCUA: Scaling Open-Source Computer Use Agents with Cross-Platform Data](https://arxiv.org/abs/2509.15221) | ICLR 2026 Oral (verify) | Desktop, mobile, web | Cross-platform open CUA data and model scaling. |
@@ -116,6 +119,8 @@ Read these after the relevant method papers, mainly to understand experimental s
 | watch | [OpenWebVoyager: Building Multimodal Web Agents via Iterative Real-World Exploration, Feedback and Optimization](https://aclanthology.org/2025.acl-long.1336/) | ACL 2025 | Web | Real-world exploration and feedback for web agents. |
 | watch | [AndroidLab: Training and Systematic Benchmarking of Android Autonomous Agents](https://aclanthology.org/2025.acl-long.107/) | ACL 2025 | Mobile | Android training/evaluation environment and data. |
 | watch | [GUI-explorer: Autonomous Exploration and Mining of Transition-aware Knowledge for GUI Agent](https://aclanthology.org/2025.acl-long.282/) | ACL 2025 | Mobile | Transition-aware knowledge mining without training. |
+| watch | [Less is More: Empowering GUI Agent with Context-Aware Simplification](https://arxiv.org/abs/2507.03730) | arXiv 2025 | GUI / context simplification | Simplifies element context and history context to reduce irrelevant GUI information. |
+| watch | [SecAgent: Efficient Mobile GUI Agent with Semantic Context](https://arxiv.org/abs/2603.08533) | arXiv 2026 | Mobile / efficient history | Uses semantic context summaries and multilingual GUI data for a small mobile agent. |
 | watch | [Aria-UI: Visual Grounding for GUI Instructions](https://aclanthology.org/2025.findings-acl.1152/) | Findings ACL 2025 | Grounding | Lightweight GUI grounding. |
 | watch | [UFO: A UI-Focused Agent for Windows OS Interaction](https://aclanthology.org/2025.naacl-long.26/) | NAACL 2025 | Desktop / Windows | Windows app interaction with hierarchical agent design. |
 | watch | [LiteWebAgent: The Open-Source Suite for VLM-Based Web-Agent Applications](https://aclanthology.org/2025.naacl-demo.36/) | NAACL 2025 Demo | Web | Open-source web-agent application suite. |
@@ -155,6 +160,7 @@ These are too relevant to ignore, but should be verified before we treat them as
 | watch | [WebPilot: A Versatile and Autonomous Multi-Agent System for Web Task Execution with Strategic Exploration](https://ojs.aaai.org/index.php/AAAI/article/view/34505) | Web | Planning plus MCTS execution for web agents. |
 | watch | [Agent Workflow Memory](https://proceedings.mlr.press/v267/wang25bx.html) | Web | Reusable workflow memory from past trajectories. |
 | watch | [Magentic-UI: Towards Human-in-the-loop Agentic Systems](https://arxiv.org/abs/2507.22358) | Human-in-loop | Human oversight and mixed-initiative GUI agent systems. |
+| watch | [Execution-video reward and compression cluster](execution-video-reward-and-compression.md) | Video / reward / compression | Literature cluster for execution-video reward modeling and temporal GUI-history compression. |
 ## Reading Priorities
 
 First pass:
@@ -175,4 +181,4 @@ Video demonstrations pass:
 
 1. VideoGUI, VideoWebArena, ShowUI, ShowUI-Aloha, Video-Based Reward Modeling for Computer-Use Agents.
 2. VideoAgentTrek, Watch and Learn, CUA-Suite, BacktrackAgent, WebDreamer.
-3. ProgRM, Web-Shepherd, GUI-KV, MobileDreamer, Code2World.
+3. ProgRM, Web-Shepherd, Video-Based Reward Modeling, ReVision, GUI-KV, STaR-KV.

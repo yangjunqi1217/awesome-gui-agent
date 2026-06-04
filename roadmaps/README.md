@@ -8,6 +8,10 @@ The root README and `docs/` should stay field-facing: paper lists, taxonomies, s
 
 - [Video/VLM to GUI agents](video-vlm-to-gui-agent.md) - Reading and project path for a researcher profile with video understanding, VLM, temporal grounding, and multimodal representation experience.
 
+## Focused Research Notes
+
+- [Execution-video reward and compression survey](../docs/execution-video-reward-and-compression.md) - Literature map for execution-video reward modeling and GUI video/history compression.
+
 ## Privacy Rules
 
 - Use abstract profile labels such as "video/VLM background" instead of personal identifiers.

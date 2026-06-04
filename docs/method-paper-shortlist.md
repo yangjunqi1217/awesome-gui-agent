@@ -63,6 +63,17 @@ Status labels:
 | read-next | [MAGNET](https://arxiv.org/abs/2601.19199) | arXiv 2026 | Memory-augmented web navigation | Read if we pursue workflow reuse. |
 | watch | [Persona2Web](https://arxiv.org/abs/2602.17003) | arXiv 2026 | Personalized web-agent behavior | Relevant if we pursue user-specific GUI agents. |
 
+## Efficient Visual History, Compression, And Memory
+
+| Status | Paper / report | Venue / year | Mechanism To Extract | Why Read |
+| --- | --- | --- | --- | --- |
+| read-now | [Execution-video reward and compression survey](execution-video-reward-and-compression.md) | research note | Execution-video reward plus GUI video/history compression | Current focused literature cluster. |
+| read-now | [ReVision](https://arxiv.org/abs/2605.11212) | arXiv 2026 | Temporal visual redundancy reduction | Closest prior for patch-level screenshot-history compression in CUA. |
+| read-now | [GUI-KV](https://arxiv.org/abs/2510.00536) | arXiv 2025 | Spatio-temporal GUI KV-cache compression | Strong systems baseline for long GUI histories. |
+| read-next | [STaR-KV](https://arxiv.org/abs/2606.01790) | arXiv 2026 | Adaptive GUI KV-cache re-weighting | Very recent follow-up on cache compression under GUI workloads. |
+| read-next | [Less is More](https://arxiv.org/abs/2507.03730) | arXiv 2025 | Context-aware GUI simplification | Useful baseline for element and history simplification. |
+| read-next | [SecAgent](https://arxiv.org/abs/2603.08533) | arXiv 2026 | Semantic context compression for mobile agents | Good small-model example of history summarization. |
+
 ## Training Data, Synthetic Trajectories, And Data Valuation
 
 | Status | Paper / report | Venue / year | Mechanism To Extract | Why Read |
@@ -85,6 +96,8 @@ Status labels:
 | read-now | [Web-Shepherd](https://arxiv.org/abs/2505.15277) | NeurIPS 2025 Spotlight | Process reward model for web trajectories | Direct input for progress/reward research. |
 | read-now | [ProgRM](https://arxiv.org/abs/2505.18121) | arXiv 2025 | Dense GUI progress rewards | Closest prior for state-delta progress reward ideas. |
 | read-now | [Video-Based Reward Modeling for Computer-Use Agents](https://arxiv.org/abs/2603.10178) | arXiv 2026 | Execution-video reward model | Best match for video/VLM-based progress verification. |
+| read-next | [CUARewardBench](https://arxiv.org/abs/2510.18596) | arXiv 2025 | Outcome and process reward-model evaluation | Useful evaluation substrate for execution-video and compression studies. |
+| read-next | [IntentScore](https://arxiv.org/abs/2604.05157) | arXiv 2026 | Intent-conditioned action scoring | Good action-level reward model baseline. |
 | read-next | [ComputerRL](https://arxiv.org/abs/2508.14040) | ICLR 2026 listed upstream, verify | Online RL over parallel virtual desktops and API-GUI actions | Strong industry-style desktop RL system. |
 | read-next | [MobileRL](https://arxiv.org/abs/2509.18119) | ICLR 2026 listed upstream, verify | Difficulty-adaptive GRPO for mobile agents | Useful for mobile RL and failure curriculum. |
 | watch | [Android Coach](https://arxiv.org/abs/2604.07277) | arXiv 2026 | Critic/process reward for multiple actions per state | Candidate method for efficient online RL. |
