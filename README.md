@@ -1,163 +1,140 @@
-# Awesome GUI Agent
+# Awesome GUI Agent [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-Private reading hub for GUI agents, computer-use agents, browser agents, mobile-use agents, and GUI safety.
+A curated list of GUI agents, computer-use agents, UI grounding, action models, training methods, safety work, and infrastructure.
 
-This repository is for our own reading notes and research tracking. It is not meant to replace the public awesome lists. Public lists are good for breadth; this repo should keep the smaller set of papers, repos, experimental substrates, and products that we actually read, evaluate, or plan to use.
+The root list follows the usual Awesome-list style: only high-signal resources, one-line descriptions, and category-based navigation. Internal reading maps and notes live in [`docs/`](docs/) and [`notes/`](notes/).
 
-## Scope
+## Contents
 
-GUI agents are agents that observe and operate graphical interfaces: desktop OSes, browsers, mobile apps, web apps, and professional tools. We track work that improves one or more of these layers:
+- [Surveys](#surveys)
+- [GUI Representation and Grounding](#gui-representation-and-grounding)
+- [Action Models and Agents](#action-models-and-agents)
+- [Planning, Recovery, and Memory](#planning-recovery-and-memory)
+- [Training, RL, and Reward Models](#training-rl-and-reward-models)
+- [Safety and Trust](#safety-and-trust)
+- [Products, APIs, and Infrastructure](#products-apis-and-infrastructure)
+- [Evaluation Substrates](#evaluation-substrates)
+- [Internal Guides](#internal-guides)
+- [Related Lists](#related-lists)
+- [Contributing](#contributing)
+- [License](#license)
 
-- **Perception and grounding**: screenshots, UI parsing, element localization, coordinates, OCR, accessibility trees.
-- **Planning and control**: long-horizon task decomposition, reflection, memory, recovery, tool use, action spaces.
-- **Evaluation evidence**: OS, browser, mobile, grounding, web, safety, and task-efficiency benchmarks, recorded as experiment context rather than research directions.
-- **Training data and learning**: demonstrations, synthetic task generation, RL/RLVR, reward models, distillation.
-- **Safety and reliability**: prompt injection, adversarial UI, privacy, irreversible actions, permission boundaries.
-- **Products and infra**: local/remote desktops, browser-use stacks, sandboxes, CUA APIs, agent SDKs.
+## Surveys
 
-See [docs/taxonomy.md](docs/taxonomy.md) for the working taxonomy.
+- [GUI Agents with Foundation Models: A Comprehensive Survey](https://arxiv.org/abs/2411.04890) - Broad survey of GUI-agent data resources, architectures, evaluation, and applications.
+- [GUI Agents: A Survey](https://arxiv.org/abs/2412.13501) - Survey focused on GUI-agent architectures, training, and evaluation.
+- [OS Agents: A Survey on MLLM-based Agents for Computer, Phone and Browser Use](https://aclanthology.org/2025.acl-long.369/) - ACL survey framing GUI work across computer, phone, and browser-use agents.
+- [Towards Trustworthy GUI Agents: A Survey](https://arxiv.org/abs/2503.23434) - Survey of safety, robustness, trustworthiness, and evaluation gaps for GUI agents.
 
-## How We Use This Repo
+## GUI Representation and Grounding
 
-1. Add candidate papers, repos, and experimental substrates to the relevant watchlist below.
-2. When someone reads something seriously, create a note from [notes/templates/paper-note.md](notes/templates/paper-note.md) or [notes/templates/repo-note.md](notes/templates/repo-note.md).
-3. Link the note from this README under the relevant section.
-4. Keep notes opinionated: what problem it solves, why it matters, how convincing it is, and what we should do next.
+- [ScreenAI](https://www.ijcai.org/proceedings/2024/339) - Vision-language model for UI and infographic understanding.
+- [Ferret-UI](https://eccv.ecva.net/virtual/2024/poster/749) - Grounded mobile UI understanding with region-level multimodal reasoning.
+- [OmniParser](https://github.com/microsoft/OmniParser) - Screen parser for interactable element detection and icon captioning in pure-vision GUI agents.
+- [SeeClick](https://github.com/njucckevin/SeeClick) - Screenshot-only GUI grounding model and dataset for visual GUI agents.
+- [OS-ATLAS](https://github.com/OS-Copilot/OS-Atlas) - Foundation action model and cross-platform grounding corpus for GUI agents.
+- [ShowUI](https://github.com/showlab/ShowUI) - Vision-language-action model with UI-guided token selection for GUI tasks.
+- [ScreenSpot-Pro](https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding) - High-resolution professional GUI grounding benchmark.
+- [GUI-G1](https://arxiv.org/abs/2505.15810) - RL recipe and failure analysis for R1-style GUI grounding.
+- [ReGUIDE](https://arxiv.org/abs/2505.15259) - Data-efficient GUI grounding with spatial reasoning and test-time search.
+- [A11y-Compressor](https://arxiv.org/abs/2605.00551) - Accessibility-tree compression method for efficient GUI observations.
 
-Naming convention:
+## Action Models and Agents
 
-- Papers: `notes/papers/YYYY-short-title.md`
-- Repos/projects: `notes/repos/repo-owner-name.md`
-- Products/APIs: `notes/products/product-name.md`
+- [Agent S](https://proceedings.iclr.cc/paper_files/paper/2025/hash/394c7c30ea87b5c3521b4d9e9d419071-Abstract-Conference.html) - Open agentic framework for using computers through an agent-computer interface.
+- [Aguvis](https://proceedings.mlr.press/v267/xu25ae.html) - Unified pure-vision agent for autonomous GUI interaction.
+- [OpenCUA](https://github.com/xlang-ai/OpenCUA) - Open foundations for computer-use agents, including data, tooling, and training recipes.
+- [UI-TARS](https://github.com/bytedance/UI-TARS) - Native GUI agent model family and open desktop stack from ByteDance.
+- [UI-TARS-2](https://arxiv.org/abs/2509.02544) - Technical report on GUI-agent data flywheels, multi-turn RL, and unified sandboxes.
+- [ScaleCUA](https://github.com/OpenGVLab/ScaleCUA) - Cross-platform open-source computer-use agent and data scaling effort.
+- [Mobile-Agent-v3](https://arxiv.org/abs/2508.15144) - GUI-Owl foundation model and multi-agent framework for GUI automation.
+- [UI-Venus](https://arxiv.org/abs/2508.10833) - Screenshot-only UI agent trained with reinforcement fine-tuning and data cleaning.
+- [AutoGLM](https://arxiv.org/abs/2411.00820) - Foundation GUI agent for phone and browser control with self-evolving RL.
 
-## Curated Maps
+## Planning, Recovery, and Memory
 
-High-signal entry points are:
+- [GPT-4V is a Generalist Web Agent, if Grounded](https://proceedings.mlr.press/v235/zheng24e.html) - Shows that grounding is a central bottleneck for generalist web agents.
+- [ExACT](https://proceedings.iclr.cc/paper_files/paper/2025/hash/a3b893ba1de12f76020b03f7ae8e1afd-Abstract-Conference.html) - Reflective MCTS and exploratory learning for web agents.
+- [BacktrackAgent](https://arxiv.org/abs/2505.20660) - Error detection, judgment, reflection, and backtracking for mobile GUI agents.
+- [WebDreamer](https://openreview.net/forum?id=c6l7yA0HSq) - World-model planning approach for web agents.
+- [Agent Workflow Memory](https://proceedings.mlr.press/v267/wang25bx.html) - Reusable workflow memory for web agents.
+- [Synapse](https://arxiv.org/abs/2306.07863) - Trajectory-as-exemplar prompting and memory for computer control.
+- [GUI-explorer](https://aclanthology.org/2025.acl-long.282/) - Transition-aware GUI knowledge mining without model training.
+- [VLAA-GUI](https://arxiv.org/abs/2604.21375) - Modular framework for stopping, recovering, and searching in GUI automation.
 
-- [docs/academic-papers.md](docs/academic-papers.md): top-venue and high-impact academic paper map.
-- [docs/industry-reports.md](docs/industry-reports.md): industry technical reports, products, open-source systems, sandboxes, and guardrails.
-- [docs/gui-paper-landscape.md](docs/gui-paper-landscape.md): GUI paper families organized by research mechanism.
-- [docs/method-paper-shortlist.md](docs/method-paper-shortlist.md): mechanism-first shortlist of GUI papers and technical reports to read next.
-- [docs/venue-index.md](docs/venue-index.md): papers organized by venue and year.
-- [docs/reading-roadmap.md](docs/reading-roadmap.md): suggested reading paths by research track.
-- [docs/research-questions.md](docs/research-questions.md): non-benchmark research problem clusters.
+## Training, RL, and Reward Models
 
-Use [docs/taxonomy.md](docs/taxonomy.md) to classify new entries and [docs/source-map.md](docs/source-map.md) to find upstream discovery sources.
+- [DigiRL](https://proceedings.neurips.cc/paper_files/paper/2024/hash/1704ddd0bb89f159dfe609b32c889995-Abstract-Conference.html) - Offline-to-online RL for in-the-wild mobile device-control agents.
+- [WebRL](https://openreview.net/forum?id=oVKEAFjEqv) - Self-evolving online curriculum RL for web agents.
+- [WebAgent-R1](https://arxiv.org/abs/2505.16421) - End-to-end multi-turn RL for web agents.
+- [Web-Shepherd](https://arxiv.org/abs/2505.15277) - Process reward model and trajectory preference data for web agents.
+- [ProgRM](https://arxiv.org/abs/2505.18121) - Dense progress rewards for GUI-agent reinforcement learning.
+- [ComputerRL](https://arxiv.org/abs/2508.14040) - Online RL framework over parallel virtual desktops and API-GUI actions.
+- [MobileRL](https://arxiv.org/abs/2509.18119) - Difficulty-adaptive online RL for mobile GUI agents.
+- [OS-Genesis](https://aclanthology.org/2025.acl-long.277/) - Task generation and trajectory data for OS agents.
+- [ANCHOR](https://arxiv.org/abs/2602.07153) - Branch-point trajectory expansion for GUI-agent data generation.
 
-## Existing Public Lists To Monitor
+## Safety and Trust
 
-These are our upstream discovery sources. We should use them for breadth and updates, but keep our own notes independent.
+- [Attacking Vision-Language Computer Agents via Pop-ups](https://aclanthology.org/2025.acl-long.411/) - Demonstrates adversarial pop-up attacks against VLM computer-use agents.
+- [EIA](https://openreview.net/forum?id=xMOLUzo2Lk) - Environmental injection attack for privacy leakage in web agents.
+- [AgentDAM](https://arxiv.org/abs/2503.09780) - Data-minimization and privacy leakage evaluation for autonomous web agents.
+- [ST-WebAgentBench](https://openreview.net/forum?id=MuCDzH0ctf) - Safety and trustworthiness benchmark for web agents.
+- [OS-HARM](https://github.com/tml-epfl/os-harm) - Safety benchmark for misuse, prompt injection, and harmful computer-use behavior.
+- [RedTeamCUA](https://github.com/OSU-NLP-Group/RedTeamCUA) - Hybrid web-OS adversarial testing for computer-use agents.
+- [Progent](https://arxiv.org/abs/2504.11703) - Programmable privilege control for agent actions.
+- [VeriOS](https://arxiv.org/pdf/2509.07553) - Query-driven human-agent-GUI interaction for trustworthy OS agents.
+- [Magentic-UI](https://arxiv.org/abs/2507.22358) - Human-in-the-loop agentic system with co-planning, action guards, and answer verification.
 
-- [showlab/Awesome-GUI-Agent](https://github.com/showlab/Awesome-GUI-Agent): broad list covering datasets, benchmarks, models, surveys, projects, and safety.
-- [OSU-NLP-Group/GUI-Agents-Paper-List](https://github.com/OSU-NLP-Group/GUI-Agents-Paper-List): paper-first list with environment and keyword browsing.
-- [ZJU-REAL/Awesome-GUI-Agents](https://github.com/ZJU-REAL/Awesome-GUI-Agents): weekly paper list and modular taxonomy.
-- [Autonomous-Agent-Team/Awesome-GUI-Agent-Safety](https://github.com/Autonomous-Agent-Team/Awesome-GUI-Agent-Safety): safety-focused papers, attacks, defenses, and evaluation.
-- [cdxeve/awesome-computer-use-agents](https://github.com/cdxeve/awesome-computer-use-agents): computer-use agents, including GUI and terminal/CLI directions.
+## Products, APIs, and Infrastructure
 
-More detail is in [docs/source-map.md](docs/source-map.md).
+- [OpenAI Computer-Using Agent](https://openai.com/index/computer-using-agent/) - CUA product direction and safety model for computer-use actions.
+- [openai/openai-cua-sample-app](https://github.com/openai/openai-cua-sample-app) - Sample app for experimenting with OpenAI CUA loops.
+- [Anthropic computer use](https://www.anthropic.com/news/3-5-models-and-computer-use) - Computer-use tool protocol and model release from Anthropic.
+- [Project Mariner](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/google-gemini-ai-update-december-2024/) - Google DeepMind browser-control product direction.
+- [trycua/cua](https://github.com/trycua/cua) - Sandboxes, SDKs, and virtualization infrastructure for computer-use agents.
+- [BrowserGym](https://openreview.net/forum?id=5298fKGmv3) - Unified web-agent experimentation ecosystem from the ServiceNow research stack.
+- [UI-TARS Desktop](https://github.com/bytedance/UI-TARS-desktop) - Open multimodal desktop agent stack.
+- [browser-use/vibetest-use](https://github.com/browser-use/vibetest-use) - Browser-use based QA and browser automation workflow.
+- [langchain-ai/langgraph-cua-py](https://github.com/langchain-ai/langgraph-cua-py) - LangGraph implementation patterns for CUA loops.
+- [vercel-labs/ai-sdk-computer-use](https://github.com/vercel-labs/ai-sdk-computer-use) - Computer-use agent built with Next.js and the Vercel AI SDK.
 
-## Core Reading Queue
+## Evaluation Substrates
 
-This queue is paper-family-first. Evaluation papers are included because methods use them in experiments, not because we want a new benchmark as the main contribution.
+Benchmarks are listed here as experimental substrates. They are useful for reading method papers and designing evaluations, but they are not the default source of new research questions.
 
-### Surveys And Framing
+- [OSWorld](https://github.com/xlang-ai/OSWorld) - Open-ended desktop tasks in real computer environments.
+- [WebArena](https://github.com/web-arena-x/webarena) - Realistic self-hosted web environment for autonomous agents.
+- [VisualWebArena](https://aclanthology.org/2024.acl-long.50/) - Visually grounded web-agent task suite.
+- [AndroidWorld](https://github.com/google-research/android_world) - Programmatic Android environment and benchmark for autonomous agents.
+- [WorkArena](https://proceedings.mlr.press/v235/drouin24a.html) - Enterprise knowledge-work benchmark built around ServiceNow tasks.
+- [Windows Agent Arena](https://github.com/microsoft/WindowsAgentArena) - Windows-specific OS-agent evaluation environment.
+- [OSWorld-G](https://github.com/xlang-ai/OSWorld-G) - Grounding-focused extension of OSWorld.
+- [VideoGUI](https://proceedings.neurips.cc/paper_files/paper/2024/hash/804e757b7d7043c26701c3a313032101-Abstract-Datasets_and_Benchmarks_Track.html) - GUI automation benchmark from instructional videos.
+- [ScienceBoard](https://arxiv.org/abs/2505.19897) - Scientific-workflow benchmark with professional desktop software.
 
-- [ ] [GUI Agents with Foundation Models: A Comprehensive Survey](https://arxiv.org/abs/2411.04890).
-- [ ] [GUI Agents: A Survey](https://arxiv.org/abs/2412.13501).
-- [ ] [OS Agents: A Survey on MLLM-based Agents for Computer, Phone and Browser Use](https://aclanthology.org/2025.acl-long.369/).
-- [ ] [Towards Trustworthy GUI Agents: A Survey](https://arxiv.org/abs/2503.23434).
+## Internal Guides
 
-### Models And Agents
+- [Academic paper map](docs/academic-papers.md) - Broader academic index organized by paper type, venue, and priority.
+- [Industry reports and systems](docs/industry-reports.md) - Technical reports, product APIs, open-source stacks, and guardrails.
+- [GUI paper landscape](docs/gui-paper-landscape.md) - Paper families organized by GUI-agent research mechanisms.
+- [Method paper shortlist](docs/method-paper-shortlist.md) - Mechanism-first reading shortlist for the next sprint.
+- [Reading roadmap](docs/reading-roadmap.md) - Reading order for representation, grounding, action models, learning, and safety.
+- [Research questions](docs/research-questions.md) - Non-benchmark research directions to consider.
+- [Notes workflow](notes/README.md) - How to create and maintain internal reading notes.
 
-- [ ] [OpenCUA](https://github.com/xlang-ai/OpenCUA): open foundations for computer-use agents.
-- [ ] [UI-TARS](https://github.com/bytedance/UI-TARS): native GUI agent work from ByteDance.
-- [ ] [UI-TARS-2 Technical Report](https://arxiv.org/abs/2509.02544): multi-turn RL and data flywheel.
-- [ ] [UI-TARS Desktop](https://github.com/bytedance/UI-TARS-desktop): open multimodal agent stack for desktop use.
-- [ ] [SeeClick](https://github.com/njucckevin/SeeClick): visual GUI agent model/data/code.
-- [ ] [OS-ATLAS](https://github.com/OS-Copilot/OS-Atlas): foundation action model for generalist GUI agents.
-- [ ] [ShowUI](https://github.com/showlab/ShowUI): vision-language-action model for GUI visual agents.
-- [ ] [Aguvis](https://github.com/xlang-ai/aguvis): unified pure-vision GUI agent.
-- [ ] [Agent S](https://proceedings.iclr.cc/paper_files/paper/2025/hash/394c7c30ea87b5c3521b4d9e9d419071-Abstract-Conference.html): open agentic framework for computer use.
-- [ ] [ScaleCUA](https://github.com/OpenGVLab/ScaleCUA): cross-platform computer-use agent.
-- [ ] [Mobile-Agent-v3](https://arxiv.org/abs/2508.15144): fundamental agents for GUI automation.
-- [ ] [UI-Venus Technical Report](https://arxiv.org/abs/2508.10833): high-performance UI agents with RFT.
-- [ ] [ShowUI-Aloha](https://github.com/showlab/ShowUI-Aloha): human-taught computer-use agent for Windows and macOS.
-- [ ] [EvoCUA](https://github.com/meituan/EvoCUA): evolving computer-use agent.
-- [ ] [SEAgent](https://github.com/SunzeY/SEAgent): self-evolving computer-use agent.
+## Related Lists
 
-### Learning And Reward Models
+- [showlab/Awesome-GUI-Agent](https://github.com/showlab/Awesome-GUI-Agent) - Broad public list of GUI-agent papers, datasets, projects, and surveys.
+- [OSU-NLP-Group/GUI-Agents-Paper-List](https://github.com/OSU-NLP-Group/GUI-Agents-Paper-List) - Paper-first GUI-agent list with environment and keyword browsing.
+- [ZJU-REAL/Awesome-GUI-Agents](https://github.com/ZJU-REAL/Awesome-GUI-Agents) - Weekly GUI-agent paper list and taxonomy.
+- [Autonomous-Agent-Team/Awesome-GUI-Agent-Safety](https://github.com/Autonomous-Agent-Team/Awesome-GUI-Agent-Safety) - Safety-focused GUI-agent list covering attacks, defenses, and evaluations.
+- [cdxeve/awesome-computer-use-agents](https://github.com/cdxeve/awesome-computer-use-agents) - Computer-use agent list covering GUI, browser, and terminal directions.
 
-- [ ] [WebRL](https://openreview.net/forum?id=oVKEAFjEqv): self-evolving online curriculum RL for web agents.
-- [ ] [WebAgent-R1](https://arxiv.org/abs/2505.16421): end-to-end multi-turn RL for web agents.
-- [ ] [DigiRL](https://proceedings.neurips.cc/paper_files/paper/2024/hash/1704ddd0bb89f159dfe609b32c889995-Abstract-Conference.html): in-the-wild mobile device-control RL.
-- [ ] [Web-Shepherd](https://arxiv.org/abs/2505.15277): process reward model for web agents.
-- [ ] [GUI-G1](https://arxiv.org/abs/2505.15810): R1-Zero-like RL for GUI grounding.
+## Contributing
 
-### Infrastructure And Tools
+See [CONTRIBUTING.md](CONTRIBUTING.md). Add only resources we can recommend, keep descriptions factual, and put broad intake or speculative candidates in the docs instead of the root list.
 
-- [ ] [trycua/cua](https://github.com/trycua/cua): sandboxes, SDKs, and benchmarks for computer-use agents.
-- [ ] [openai/openai-cua-sample-app](https://github.com/openai/openai-cua-sample-app): OpenAI CUA sample app.
-- [ ] [microsoft/OmniParser](https://github.com/microsoft/OmniParser): screen parsing for vision-based GUI agents.
-- [ ] [browser-use/vibetest-use](https://github.com/browser-use/vibetest-use): browser-use based QA testing.
-- [ ] [langchain-ai/langgraph-cua-py](https://github.com/langchain-ai/langgraph-cua-py): CUA implementation with LangGraph.
-- [ ] [vercel-labs/ai-sdk-computer-use](https://github.com/vercel-labs/ai-sdk-computer-use): computer-use agent with Next.js and Vercel AI SDK.
+## License
 
-### Safety And Red Teaming
-
-- [ ] [RedTeamCUA](https://github.com/OSU-NLP-Group/RedTeamCUA): adversarial testing in hybrid web-OS environments.
-- [ ] [RiOSWorld](https://github.com/yjyddq/RiOSWorld): risk benchmark.
-- [ ] [OS-Harm](https://github.com/tml-epfl/os-harm): harm-oriented computer-use safety benchmark.
-- [ ] [AgentDAM](https://arxiv.org/abs/2503.09780): privacy leakage evaluation for autonomous web agents.
-- [ ] [Attacking Vision-Language Computer Agents via Pop-ups](https://aclanthology.org/2025.acl-long.411/): adversarial UI attacks.
-- [ ] [ST-WebAgentBench](https://openreview.net/forum?id=MuCDzH0ctf): safety and trustworthiness in web agents.
-- [ ] Prompt-injection, malicious UI, and environmental injection attacks against browser/computer-use agents.
-
-### Evaluation Papers And Experimental Substrates
-
-Read these when inspecting a method paper's experimental section. They are not the starting point for choosing our research direction.
-
-- [ ] [OSWorld](https://github.com/xlang-ai/OSWorld): open-ended desktop tasks in real computer environments.
-- [ ] [WebArena](https://github.com/web-arena-x/webarena): realistic web environment for autonomous agents.
-- [ ] [VisualWebArena](https://aclanthology.org/2024.acl-long.50/): visually grounded web-agent tasks.
-- [ ] [AndroidWorld](https://github.com/google-research/android_world): Android environment and benchmark for autonomous agents.
-- [ ] [WorkArena](https://proceedings.mlr.press/v235/drouin24a.html): enterprise knowledge-work benchmark.
-- [ ] [Windows Agent Arena](https://github.com/microsoft/WindowsAgentArena): Windows OS-agent benchmark.
-- [ ] [ScreenSpot-Pro](https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding): professional high-resolution GUI grounding.
-- [ ] [OSWorld-G](https://github.com/xlang-ai/OSWorld-G): grounding-focused OSWorld extension.
-- [ ] [VideoGUI](https://proceedings.neurips.cc/paper_files/paper/2024/hash/804e757b7d7043c26701c3a313032101-Abstract-Datasets_and_Benchmarks_Track.html): GUI automation from instructional videos.
-- [ ] [RiOSWorld](https://github.com/yjyddq/RiOSWorld): risk benchmark for multimodal computer-use agents.
-- [ ] [OS-Harm](https://github.com/tml-epfl/os-harm): safety benchmark for computer-use agents.
-
-## Notes Index
-
-### Papers
-
-- [OSWorld](notes/papers/2024-osworld.md)
-- [WebArena](notes/papers/2023-webarena.md)
-- [AndroidWorld](notes/papers/2024-androidworld.md)
-- [ScreenSpot-Pro](notes/papers/2025-screenspot-pro.md)
-- [SeeClick](notes/papers/2024-seeclick.md)
-- [OS-ATLAS](notes/papers/2024-os-atlas.md)
-- [ShowUI](notes/papers/2025-showui.md)
-- [Agent S](notes/papers/2025-agent-s.md)
-- [UI-TARS](notes/papers/2025-ui-tars.md)
-- [OpenCUA](notes/papers/2025-opencua.md)
-
-### Repos And Systems
-
-- [Academic paper map](docs/academic-papers.md)
-- [Industry technical reports](docs/industry-reports.md)
-- [GUI paper landscape](docs/gui-paper-landscape.md)
-- [Method paper shortlist](docs/method-paper-shortlist.md)
-- [Venue and year index](docs/venue-index.md)
-- [Reading roadmap](docs/reading-roadmap.md)
-- [Research questions beyond benchmarks](docs/research-questions.md)
-- [Public source map](docs/source-map.md)
-- [Working taxonomy](docs/taxonomy.md)
-
-## Maintenance
-
-- Review public upstream lists weekly or before any literature review sprint.
-- Prefer fewer, higher-signal entries over broad dumping.
-- Every note should end with a concrete decision: read deeper, reproduce, benchmark, ignore, or watch.
-- For copied facts from public repos, link the source and write our own summary.
+[CC0 1.0](LICENSE).
