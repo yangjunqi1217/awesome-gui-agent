@@ -153,8 +153,6 @@ These are too relevant to ignore, but should be verified before we treat them as
 | watch | [WebPilot: A Versatile and Autonomous Multi-Agent System for Web Task Execution with Strategic Exploration](https://ojs.aaai.org/index.php/AAAI/article/view/34505) | Web | Planning plus MCTS execution for web agents. |
 | watch | [Agent Workflow Memory](https://proceedings.mlr.press/v267/wang25bx.html) | Web | Reusable workflow memory from past trajectories. |
 | watch | [Magentic-UI: Towards Human-in-the-loop Agentic Systems](https://arxiv.org/abs/2507.22358) | Human-in-loop | Human oversight and mixed-initiative GUI agent systems. |
-| watch | [Video/VLM transition route](video-vlm-to-gui-agent.md) | Reading guide | Internal map for screen recordings, execution-video rewards, GUI world models, and temporal compression. |
-
 ## Reading Priorities
 
 First pass:
@@ -171,7 +169,7 @@ Second pass:
 3. Magentic-UI, VeriOS, AgentSentinel, RedTeamCUA.
 4. WebArena, OSWorld, AndroidWorld, WorkArena, Windows Agent Arena, ScreenSpot-Pro only as experiment substrates for the methods above.
 
-Video/VLM transition pass:
+Video demonstrations pass:
 
 1. VideoGUI, VideoWebArena, ShowUI, ShowUI-Aloha, Video-Based Reward Modeling for Computer-Use Agents.
 2. VideoAgentTrek, Watch and Learn, CUA-Suite, BacktrackAgent, WebDreamer.

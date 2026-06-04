@@ -12,7 +12,10 @@ Internal guides:
 - [Research questions](../docs/research-questions.md)
 - [Source map](../docs/source-map.md)
 - [Working taxonomy](../docs/taxonomy.md)
-- [Video/VLM transition route](../docs/video-vlm-to-gui-agent.md)
+
+Profile-specific reading paths live outside the field-facing docs:
+
+- [Research roadmaps](../roadmaps/README.md)
 
 When we actually read an item:
 

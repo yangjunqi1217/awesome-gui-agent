@@ -1,10 +1,12 @@
-# Video/VLM To GUI Agent Transition
+# Video/VLM To GUI Agent Roadmap
 
-This guide is for researchers coming from video understanding, VLMs, temporal grounding, and multimodal representation learning.
+Profile: a researcher with experience in video understanding, VLMs, temporal grounding, and multimodal representation learning who wants to move into GUI agents.
+
+This is a profile-specific reading and project roadmap. It intentionally avoids personal identifiers and keeps reusable field notes in `docs/`.
 
 The best match is not "build another GUI benchmark." The natural bridge is to treat GUI interaction as a temporally grounded video-and-action problem: infer intent from screen recordings, recover action boundaries, predict state deltas, judge whether progress happened, and compress long visual histories into the evidence an agent needs before acting.
 
-## Why Video Background Transfers
+## Why This Profile Transfers
 
 GUI agents observe a screen sequence, choose a low-level action, and then observe a changed screen. That makes many GUI-agent failures look like video-understanding failures:
 
@@ -119,7 +121,7 @@ Good research angles:
 - storing visual memory as state deltas or workflow graphs,
 - routing between raw pixels, parsed UI elements, OCR, DOM, and accessibility trees.
 
-## Project Ideas That Match A Video/VLM Background
+## Project Ideas That Match This Profile
 
 1. **Video-to-trajectory parser for GUI agents**
 

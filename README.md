@@ -1,14 +1,14 @@
 # Awesome GUI Agent [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A private living survey of GUI agents, computer-use agents, UI grounding, action models, training methods, safety work, and infrastructure.
+A curated living survey of GUI agents, computer-use agents, UI grounding, action models, training methods, safety work, and infrastructure.
 
 This repository is organized around GUI-agent mechanisms rather than benchmark names. Benchmarks are included as experimental substrates for reading papers and comparing systems, not as the default source of research questions.
 
 <h2><a href="docs/gui-paper-landscape.md">A Mechanism-First Reading Map For GUI Agents</a></h2>
 
-This is our working handbook for reading GUI-agent papers and maintaining notes. The main split is not "which benchmark is new"; it is which mechanism a paper proposes: screen representation, visual grounding, action modeling, planning, recovery, memory, training signal, reward modeling, safety policy, or execution infrastructure.
+This is a working handbook for reading GUI-agent papers and maintaining notes. The main split is not "which benchmark is new"; it is which mechanism a paper proposes: screen representation, visual grounding, action modeling, planning, recovery, memory, training signal, reward modeling, safety policy, or execution infrastructure.
 
-For a video understanding / VLM background, start with the video-demonstration branch in [`docs/video-vlm-to-gui-agent.md`](docs/video-vlm-to-gui-agent.md). It focuses on screen recordings, instructional videos, execution-video reward models, GUI world models, and long-trajectory compression.
+Profile-specific reading plans are kept separately under [`roadmaps/`](roadmaps/) so the root list remains a field-facing resource.
 
 <p align="center">
   <img src="assets/gui-agent-taxonomy.svg" alt="GUI agent taxonomy" width="860" />
@@ -16,7 +16,7 @@ For a video understanding / VLM background, start with the video-demonstration b
 
 <h3>News</h3>
 
-**2026-06-04** - Added a video/VLM-to-GUI transition route covering video demonstrations, execution-video rewards, GUI world models, recovery, and temporal compression.
+**2026-06-04** - Added a video-demonstration and trajectory branch covering screen recordings, execution-video rewards, GUI world models, recovery, and temporal compression.
 
 **2026-06-04** - Reframed the list around GUI-agent paper families: representation, grounding, action models, planning, recovery, memory, RL, safety, and infrastructure.
 
@@ -28,7 +28,7 @@ Most GUI-agent papers contribute a mechanism: a screen representation, grounding
 
 The root README keeps a compact curated list. Broader intake, reading notes, and research questions live in [`docs/`](docs/) and [`notes/`](notes/).
 
-**Quick Navigation**: Surveys | Grounding | Action Models | Video/VLM Route | Planning | Training | Safety | Infrastructure
+**Quick Navigation**: Surveys | Grounding | Action Models | Video Demonstrations | Planning | Training | Safety | Infrastructure
 
 ## Contents
 
