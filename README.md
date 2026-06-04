@@ -47,6 +47,7 @@ Benchmark and dataset papers are included because they reveal action spaces, fai
 | Goal | Entry Point |
 | --- | --- |
 | Understand the field structure | [GUI paper landscape](docs/gui-paper-landscape.md) |
+| Read one-summary-per-paper notes | [Paper summaries](docs/paper-summaries.md) |
 | Choose a reading order | [Reading roadmap](docs/reading-roadmap.md) |
 | Find high-priority method papers | [Method paper shortlist](docs/method-paper-shortlist.md) |
 | Compare models, products, and infrastructure | [Model zoo and system map](docs/model-zoo.md) |

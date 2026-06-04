@@ -5,6 +5,7 @@ Use `docs/academic-papers.md` and `docs/industry-reports.md` as the intake maps.
 Internal guides:
 
 - [Academic paper map](../docs/academic-papers.md)
+- [Paper summaries](../docs/paper-summaries.md)
 - [Industry technical reports](../docs/industry-reports.md)
 - [GUI paper landscape](../docs/gui-paper-landscape.md)
 - [Method paper shortlist](../docs/method-paper-shortlist.md)

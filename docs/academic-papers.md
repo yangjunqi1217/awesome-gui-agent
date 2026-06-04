@@ -2,6 +2,8 @@
 
 This is a curated academic entry map for GUI agents, computer-use agents, web agents, mobile agents, and UI grounding.
 
+For abstract-level one-summary-per-paper notes, see [paper-summaries.md](paper-summaries.md).
+
 Scope:
 
 - Prefer top venues and high-impact method/model papers.
