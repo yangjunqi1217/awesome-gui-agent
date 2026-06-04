@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="430" viewBox="0 0 980 430" role="img" aria-labelledby="title desc">
+  <title id="title">GUI agent taxonomy</title>
+  <desc id="desc">A mechanism-first taxonomy for GUI-agent papers.</desc>
+  <style>
+    .bg { fill: #fbfbf8; }
+    .title { font: 700 28px Arial, sans-serif; fill: #1f2933; }
+    .subtitle { font: 400 15px Arial, sans-serif; fill: #4b5563; }
+    .box { rx: 14; fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.5; }
+    .head { font: 700 16px Arial, sans-serif; fill: #111827; }
+    .text { font: 400 13px Arial, sans-serif; fill: #374151; }
+    .pill { rx: 12; fill: #eef6ff; stroke: #bfdbfe; }
+    .pill2 { rx: 12; fill: #f0fdf4; stroke: #bbf7d0; }
+    .pill3 { rx: 12; fill: #fff7ed; stroke: #fed7aa; }
+    .arrow { stroke: #64748b; stroke-width: 1.4; fill: none; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="980" height="430"/>
+  <text x="490" y="42" text-anchor="middle" class="title">GUI Agent Papers: Mechanism-First Reading Map</text>
+  <text x="490" y="68" text-anchor="middle" class="subtitle">Start from the agent mechanism, then read benchmarks as experimental evidence.</text>
+
+  <rect x="36" y="102" width="276" height="118" class="box"/>
+  <text x="58" y="134" class="head">Observe and Represent</text>
+  <text x="58" y="160" class="text">Screenshot, OCR, UI tree, DOM,</text>
+  <text x="58" y="180" class="text">accessibility, screen parsing,</text>
+  <text x="58" y="200" class="text">region selection, compression.</text>
+
+  <rect x="352" y="102" width="276" height="118" class="box"/>
+  <text x="374" y="134" class="head">Ground and Act</text>
+  <text x="374" y="160" class="text">Pointing, boxes, element IDs,</text>
+  <text x="374" y="180" class="text">coordinate actions, GUI-VLA,</text>
+  <text x="374" y="200" class="text">hybrid GUI/API/tool actions.</text>
+
+  <rect x="668" y="102" width="276" height="118" class="box"/>
+  <text x="690" y="134" class="head">Plan and Recover</text>
+  <text x="690" y="160" class="text">State tracking, search, memory,</text>
+  <text x="690" y="180" class="text">workflow reuse, off-track detection,</text>
+  <text x="690" y="200" class="text">backtracking and stopping.</text>
+
+  <path d="M 312 161 L 347 161" class="arrow"/>
+  <path d="M 628 161 L 663 161" class="arrow"/>
+
+  <rect x="92" y="270" width="230" height="92" class="pill"/>
+  <text x="207" y="300" text-anchor="middle" class="head">Training Signal</text>
+  <text x="207" y="326" text-anchor="middle" class="text">demonstrations, synthetic tasks,</text>
+  <text x="207" y="346" text-anchor="middle" class="text">RL, reward models, data flywheels</text>
+
+  <rect x="375" y="270" width="230" height="92" class="pill2"/>
+  <text x="490" y="300" text-anchor="middle" class="head">Safety and Trust</text>
+  <text x="490" y="326" text-anchor="middle" class="text">environmental injection, privacy,</text>
+  <text x="490" y="346" text-anchor="middle" class="text">permissions, confirmation policies</text>
+
+  <rect x="658" y="270" width="230" height="92" class="pill3"/>
+  <text x="773" y="300" text-anchor="middle" class="head">Evaluation Evidence</text>
+  <text x="773" y="326" text-anchor="middle" class="text">OSWorld, WebArena, AndroidWorld,</text>
+  <text x="773" y="346" text-anchor="middle" class="text">ScreenSpot, WorkArena, safety suites</text>
+
+  <path d="M 174 222 L 207 266" class="arrow"/>
+  <path d="M 490 222 L 490 266" class="arrow"/>
+  <path d="M 806 222 L 773 266" class="arrow"/>
+</svg>

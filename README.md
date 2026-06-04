@@ -2,7 +2,23 @@
 
 A curated list of GUI agents, computer-use agents, UI grounding, action models, training methods, safety work, and infrastructure.
 
-The root list follows the usual Awesome-list style: only high-signal resources, one-line descriptions, and category-based navigation. Internal reading maps and notes live in [`docs/`](docs/) and [`notes/`](notes/).
+This repository is organized around GUI-agent mechanisms rather than benchmark names. Benchmarks are included as experimental substrates for reading papers and comparing systems.
+
+<p align="center">
+  <img src="assets/gui-agent-taxonomy.svg" alt="GUI agent taxonomy" width="860" />
+</p>
+
+<h3>News</h3>
+
+**2026-06-04** - Reframed the list around GUI-agent paper families: representation, grounding, action models, planning, recovery, memory, RL, safety, and infrastructure.
+
+**2026-06-04** - Added internal reading maps and note templates for mechanism-first paper reading.
+
+<h3>How To Read</h3>
+
+Most GUI-agent papers contribute a mechanism: a screen representation, grounding method, action model, planning/recovery strategy, memory system, training signal, reward model, safety policy, or execution substrate. Read each paper by first identifying the mechanism, then record which benchmarks were used as evidence.
+
+The root README keeps a compact curated list. Broader intake, reading notes, and research questions live in [`docs/`](docs/) and [`notes/`](notes/).
 
 ## Contents
 
