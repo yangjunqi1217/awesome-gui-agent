@@ -58,6 +58,7 @@ Takeaway: these works provide the raw material for temporal evidence, from human
 | [SecAgent](https://arxiv.org/abs/2603.08533) | Mar. 2026 | Mobile GUI agents need efficient history representations and stronger non-English GUI data. | Compresses past actions into semantic context summaries for a small mobile GUI agent. |
 | [MAGNET](https://arxiv.org/abs/2601.19199) | Jan. 2026 | Mobile GUI agents fail when app UIs update and old workflows become stale. | Uses memory-driven knowledge evolution with stationary and procedural memory. |
 | [Agent Workflow Memory](https://proceedings.mlr.press/v267/wang25bx.html) | ICML 2025 | Agents rediscover recurring workflows instead of reusing past task structure. | Induces reusable workflow memories from prior trajectories and retrieves them during future tasks. |
+| [A-Mem](https://arxiv.org/abs/2502.12110) | NeurIPS 2025 | General LLM agents need memory that evolves through organization, linking, and updating. | Builds an agentic memory network with Zettelkasten-style notes, dynamic indexing, link generation, and memory evolution. |
 | [Synapse](https://arxiv.org/abs/2306.07863) | ICLR 2024 | Computer-control agents need past trajectories as useful in-context examples. | Retrieves trajectory exemplars and memory for computer-control prompting. |
 | [Step-level Optimization for Efficient Computer-use Agents](https://arxiv.org/abs/2604.27151) | Apr. 2026 | Calling a strong multimodal model at every GUI step is too slow and expensive. | Uses monitors to decide when cheap policies are enough and when to escalate to stronger models. |
 
@@ -89,7 +90,8 @@ Third pass:
 2. [SecAgent](https://arxiv.org/abs/2603.08533)
 3. [MAGNET](https://arxiv.org/abs/2601.19199)
 4. [Agent Workflow Memory](https://proceedings.mlr.press/v267/wang25bx.html)
-5. [Step-level Optimization for Efficient Computer-use Agents](https://arxiv.org/abs/2604.27151)
+5. [A-Mem](https://arxiv.org/abs/2502.12110)
+6. [Step-level Optimization for Efficient Computer-use Agents](https://arxiv.org/abs/2604.27151)
 
 ## What To Record In Paper Notes
 

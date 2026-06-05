@@ -159,6 +159,7 @@ These are too relevant to ignore, but should be verified before we treat them as
 | watch | [Agent-E: From Autonomous Web Navigation to Foundational Design Principles in Agentic Systems](https://arxiv.org/abs/2407.13032) | Web | Architecture/design principles from web navigation. |
 | watch | [WebPilot: A Versatile and Autonomous Multi-Agent System for Web Task Execution with Strategic Exploration](https://ojs.aaai.org/index.php/AAAI/article/view/34505) | Web | Planning plus MCTS execution for web agents. |
 | watch | [Agent Workflow Memory](https://proceedings.mlr.press/v267/wang25bx.html) | Web | Reusable workflow memory from past trajectories. |
+| watch | [A-Mem: Agentic Memory for LLM Agents](https://arxiv.org/abs/2502.12110) | General agents / memory | Zettelkasten-style dynamic memory indexing, linking, and evolution for LLM agents. |
 | watch | [Magentic-UI: Towards Human-in-the-loop Agentic Systems](https://arxiv.org/abs/2507.22358) | Human-in-loop | Human oversight and mixed-initiative GUI agent systems. |
 | watch | [Execution-video reward and compression cluster](execution-video-reward-and-compression.md) | Video / reward / compression | Literature cluster for execution-video reward modeling and temporal GUI-history compression. |
 ## Reading Priorities

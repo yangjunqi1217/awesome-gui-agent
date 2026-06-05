@@ -29,6 +29,7 @@ These entries are high-signal but need venue/status confirmation before we cite 
 | [AgentDAM](https://arxiv.org/abs/2503.09780) | privacy benchmark | high |
 | [Mind2Web 2](https://openreview.net/forum?id=AUaW6DS9si) | agentic search benchmark | medium |
 | [Scaling Computer-Use Grounding via UI Decomposition and Synthesis](https://arxiv.org/abs/2505.13227) | OSWorld-G / dataset | high |
+| [A-Mem](https://arxiv.org/abs/2502.12110) | agentic memory / LLM agents | medium |
 
 ### ICML 2025
 

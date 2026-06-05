@@ -98,6 +98,7 @@ Core question: can an agent know that the current screen no longer matches the i
 - [VLAA-GUI](https://arxiv.org/abs/2604.21375)
 - [GUI-explorer](https://aclanthology.org/2025.acl-long.282/)
 - [Agent Workflow Memory](https://proceedings.mlr.press/v267/wang25bx.html)
+- [A-Mem](https://arxiv.org/abs/2502.12110)
 - [Synapse](https://arxiv.org/abs/2306.07863)
 
 Good research angles:
@@ -117,6 +118,7 @@ Core question: how much visual history should the GUI agent keep?
 - [Less is More](https://arxiv.org/abs/2507.03730)
 - [ShowUI](https://github.com/showlab/ShowUI)
 - [Agent Workflow Memory](https://proceedings.mlr.press/v267/wang25bx.html)
+- [A-Mem](https://arxiv.org/abs/2502.12110)
 - [MAGNET](https://arxiv.org/abs/2601.19199)
 - [A11y-Compressor](https://arxiv.org/abs/2605.00551)
 - [SecAgent](https://arxiv.org/abs/2603.08533)

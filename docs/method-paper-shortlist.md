@@ -59,6 +59,7 @@ Status labels:
 | --- | --- | --- | --- | --- |
 | read-now | [Synapse](https://arxiv.org/abs/2306.07863) | ICLR 2024 | Trajectory-as-exemplar memory | Early memory baseline for computer control. |
 | read-now | [Agent Workflow Memory](https://proceedings.mlr.press/v267/wang25bx.html) | ICML 2025 | Reusable workflow memory | Strong fit for memory retrieval and invalidation. |
+| read-next | [A-Mem](https://arxiv.org/abs/2502.12110) | NeurIPS 2025 | Agentic long-term memory organization | General LLM-agent memory baseline; useful for thinking about GUI memory graphs, links, and evolution. |
 | read-now | [GUI-explorer](https://aclanthology.org/2025.acl-long.282/) | ACL 2025 | Transition-aware GUI knowledge mining | Useful for app map construction without training. |
 | read-next | [MAGNET](https://arxiv.org/abs/2601.19199) | arXiv 2026 | Memory-augmented web navigation | Read if we pursue workflow reuse. |
 | watch | [Persona2Web](https://arxiv.org/abs/2602.17003) | arXiv 2026 | Personalized web-agent behavior | Relevant if we pursue user-specific GUI agents. |

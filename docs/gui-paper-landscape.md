@@ -189,6 +189,7 @@ Subproblems:
 Representative papers/systems:
 
 - Agent Workflow Memory
+- A-Mem
 - Synapse
 - Agent S
 - GUI-explorer
