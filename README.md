@@ -209,6 +209,7 @@ If you find this repo useful, please star it.
 | [OpenComputer](https://arxiv.org/abs/2605.19769) | May 2026 | Verifiable desktop software workflows with auditable partial credit. | Combines app-specific state verifiers, task synthesis, self-improving verification, and trajectory-level evaluation across 33 applications. |
 | [SaaS-Bench](https://arxiv.org/abs/2605.15777) | May 2026 | Professional SaaS workflows involving long horizons and cross-application coordination. | Uses 23 deployable SaaS systems, 106 realistic tasks, multimodal evidence, and weighted verification checkpoints. |
 | [CutVerse](https://arxiv.org/abs/2605.19484) | May 2026 | Professional media post-production in dense creative software. | Curates expert demonstrations across seven creative applications and parses screen recordings/logs into compositional GUI trajectories. |
+| [ClawBench](https://arxiv.org/abs/2604.08523) | Apr. 2026 | Everyday online workflows on live production websites. | Uses task-scoped request interception, human reference trajectories, five-layer traces, and an Agent-as-Judge evaluator. |
 
 ### Products, APIs & Infrastructure
 
